@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-15T09:31:11.100Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="Exc2q2eDejbXKm7FOIwp" version="15.2.7" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-09-15T09:31:51.303Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="9QFfQjgcm6m6f7JxUQPz" version="15.2.7" type="github" pages="5">
   <diagram id="3sutRVQx5ETBAOznUxPm" name="Home page">
     <mxGraphModel dx="1351" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -289,6 +289,9 @@
         </mxCell>
         <mxCell id="W79j7qQaIGfVuCQJrb1K-1" value="Home Visits" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=17;fontStyle=2" vertex="1" parent="RKoB1yWsiDVrHpWFjzMV-1">
           <mxGeometry x="35" y="399.01" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tmOqXckGpWlWMPSHbKzw-3" value="Map" style="html=1;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.map;" vertex="1" parent="RKoB1yWsiDVrHpWFjzMV-1">
+          <mxGeometry x="240" y="230" width="526.5" height="350" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
