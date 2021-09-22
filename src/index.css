@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Kollektif";
+  src: local("Kollektif"), url(./fonts/Kollektif.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kollektif-Bold";
+  src: local("Kollektif-Bold"),
+    url(./fonts/Kollektif-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kollektif-BoldItalic";
+  src: local("Kollektif-BoldItalic"),
+    url(./fonts/Kollektif-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Kollektif-Italic";
+  src: local("Kollektif-Italic"),
+    url(./fonts/Kollektif-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Gidole-Regular";
+  src: local("Gidole-Regular"),
+    url(./fonts/Gidole-Regular.ttf) format("truetype");
+}
