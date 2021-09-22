@@ -1,0 +1,115 @@
+/*
+
+background-color
+
+links
+links:hover
+
+COLORS: 
+Blue (primary): #3699E2
+Yellow: #F4C34D
+Red: #DC3C4D
+
+Dark grey: #2E2E2E
+Offwhite: #F8FBFD
+*/
+body {
+  background-color: #f8fbfd;
+}
+/*----------------------TEXT----------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kollektif-Bold", Arial;
+  color: #2e2e2e;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 35px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 25px;
+}
+
+p,
+a,
+ol,
+ul {
+  font-family: "Gidole-Regular", "Arial";
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.p1 {
+  font-size: 20px;
+}
+
+.p2 {
+  font-size: 18px;
+}
+
+.p3 {
+  font-size: 16px;
+}
+
+/*only for *-texts or fine-print*/
+.p4 {
+  font-size: 13px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+/*----------------------BUTTON----------------------*/
+button {
+  background-color: #dc3c4d;
+  color: #f8fbfd;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  min-width: 80px;
+  font-family: "Kollektif", "Arial";
+  box-shadow: 1px 1px 3px rgb(37, 37, 37);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d65d69;
+}
+
+button:active {
+  background-color: black;
+}
+
+button.buttonblue {
+  background-color: #3699e2;
+}
+
+button.buttonblue:hover {
+  background-color: #60a9dd;
+}
