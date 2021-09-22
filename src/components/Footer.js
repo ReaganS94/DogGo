@@ -1,5 +1,6 @@
 import React from 'react'; 
-import {TiSocialFacebook, TiSocialInstagram, TiSocialTwitter, TiSocialPinterest} from 'react-icons/ti'; 
+import {TiSocialFacebook, TiSocialTwitter, TiSocialPinterest} from 'react-icons/ti'; 
+import {AiOutlineInstagram} from 'react-icons/ai';
 import "./Footer.css"
 
 import dog from '../img/transparent-background/3.png'
@@ -9,7 +10,7 @@ function Footer() {
     <div className="footer">
            <div className="socialMediaIcons">
              <TiSocialFacebook className="icons"/>
-             <TiSocialInstagram  className="icons"/>
+             <AiOutlineInstagram className="icons"/>
              <TiSocialTwitter className="icons"/>
              <TiSocialPinterest className="icons"/>
            </div>
