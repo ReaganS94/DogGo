@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Dogfriendlyplaces from "./components/Dogfriendlyplaces";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./components/Header.css";
 import "./components/Navbar.css";
@@ -8,25 +9,14 @@ import "./App.css";
 import "./general-stylesheet.css";
 
 function App() {
-  const position = [52.3759, 9.732];
   return (
-    <>
+    <Router>
       <Header />
-      <div className="leaflet-container">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position}>
-            <Popup>
-              Hannover
-              <br /> City
-            </Popup>
-          </Marker>
-        </MapContainer>
-      </div>
-
+      <Switch>
+        <Route path="/dogfriendlyplaces">
+          <Dogfriendlyplaces />
+        </Route>
+      </Switch>
       <div className="App">
         <h1 className="textyellow">dogGo this is a title</h1>
         <h2 className="textred">dogGo this is a title</h2>
@@ -63,7 +53,7 @@ function App() {
       <div className="backgroundblue textwhite">Background blue</div>
       <div className="backgroundyellow">Background yellow</div>
       <Footer />
-    </>
+    </Router>
   );
 }
 
