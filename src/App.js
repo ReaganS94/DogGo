@@ -1,7 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
+import "./components/Header.css";
+import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
 
@@ -9,7 +11,7 @@ function App() {
   const position = [52.3759, 9.732];
   return (
     <>
-      <Navbar />
+      <Header />
       <div className="leaflet-container">
         <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
           <TileLayer
@@ -62,8 +64,6 @@ function App() {
       <div className="backgroundyellow">Background yellow</div>
       <Footer />
     </>
-
-  
   );
 }
 
