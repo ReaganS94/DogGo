@@ -1,5 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Navbar from "./components/Navbar";
+<<<<<<< HEAD
+=======
+import Footer from "./components/Footer"
+>>>>>>> footer
 
 import "./App.css";
 import "./general-stylesheet.css";
@@ -59,7 +63,10 @@ function App() {
       <div className="backgroundred textwhite">Background red</div>
       <div className="backgroundblue textwhite">Background blue</div>
       <div className="backgroundyellow">Background yellow</div>
+      <Footer />
     </>
+
+  
   );
 }
 
