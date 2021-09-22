@@ -1,6 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
+import "./components/Header.css";
+import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
 
@@ -8,7 +10,7 @@ function App() {
   const position = [52.3759, 9.732];
   return (
     <>
-      <Navbar />
+      <Header />
       <div className="leaflet-container">
         <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
           <TileLayer

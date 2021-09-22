@@ -9,6 +9,7 @@ Offwhite: #F8FBFD
 */
 body {
   background-color: #f8fbfd;
+  margin: 0;
 }
 /*----------------------TEXT----------------------*/
 h1,
@@ -87,18 +88,14 @@ button {
   border: none;
   border-radius: 1em;
   padding: 0.5em 1em;
-  min-width: 80px;
+  min-width: 100px;
   font-family: "Kollektif", "Arial";
-  box-shadow: 1px 1px 3px rgb(37, 37, 37);
+  box-shadow: 0.5px 0.2px 5px rgb(68, 68, 68);
   cursor: pointer;
 }
 
 button:hover {
   background-color: #d65d69;
-}
-
-button:active {
-  background-color: black;
 }
 
 button.buttonblue {
@@ -162,45 +159,4 @@ IMPORTANT:
   background-color: #f4c34d;
 }
 
-/*----------------------NAVBAR----------------------*/
-
-.navbar-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.navbar-left {
-  display: flex;
-  width: 20%;
-}
-
-.navbar-center {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-center ul {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-center li {
-  padding: 0.5em;
-  margin: 0.5em;
-}
-
-.navbar-right {
-  display: flex;
-  flex-direction: row;
-  width: 30%;
-}
-
-.navbar-right ul {
-  display: flex;
-  align-items: center;
-  width: inherit;
-}
-
-/*----------------------FOOTER----------------------*/
+/*-------840---------------FOOTER----------------------*/
