@@ -1,9 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Navbar from "./components/Navbar";
-<<<<<<< HEAD
-=======
 import Footer from "./components/Footer"
->>>>>>> footer
 
 import "./App.css";
 import "./general-stylesheet.css";
