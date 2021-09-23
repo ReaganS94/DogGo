@@ -32,7 +32,7 @@ useEffect(() => {
         
         <div className="userDetails">
             <div className="userDetailsLeft backgroundred">
-              <img src={user[0].profilePic}width="200px"/>
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2459&q=80" width="200px"/>
               <h6>location</h6>
               <h6>contact</h6>
             </div>
