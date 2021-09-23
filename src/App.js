@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Dogfriendlyplaces from "./components/Dogfriendlyplaces";
+import UserProfile from "./components/UserProfile";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./components/Header.css";
@@ -17,7 +18,15 @@ function App() {
           <Dogfriendlyplaces />
         </Route>
       </Switch>
-      <div className="App">
+
+      <Switch>
+        <Route path="/userprofile">
+          <UserProfile />
+        </Route>
+      </Switch>
+      
+      
+     {/* <div className="App">
         <h1 className="textyellow">dogGo this is a title</h1>
         <h2 className="textred">dogGo this is a title</h2>
         <h3 className="textblue">dogGo this is a title</h3>
@@ -52,6 +61,7 @@ function App() {
       <div className="backgroundred textwhite">Background red</div>
       <div className="backgroundblue textwhite">Background blue</div>
       <div className="backgroundyellow">Background yellow</div>
+  */}
       <Footer />
     </Router>
   );
