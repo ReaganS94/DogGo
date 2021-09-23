@@ -1,5 +1,5 @@
 import doggo_ci_final_6 from "../img/logo/doggo_ci_final_6.png";
-import { Switch, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,29 +8,32 @@ function Navbar() {
         <img src={doggo_ci_final_6} className="nav-logo" />
       </div>
       <div className="navbar-center">
-        <Switch>
-          <ul>
-            <li>
-              <Link to="/" className="kollektif textred">
-                home
-              </Link>
-            </li>
-            <li>
-              <Link to="/dogfriendlyplaces" className="kollektif textwhite">
-                doggo places
-              </Link>
-            </li>
-            <li className="kollektif textwhite">doggo sitting</li>
-            <li className="kollektif textwhite">community</li>
-          </ul>
-        </Switch>
+        <ul>
+          <NavLink to="/">
+            <li className="kollektif textwhite">home</li>
+          </NavLink>
+
+          <NavLink to="/dogfriendlyplaces">
+            <li className="kollektif textwhite">doggo places</li>{" "}
+          </NavLink>
+          <NavLink to="/dogsitting">
+            <li className="kollektif textwhite">doggo sitting</li>{" "}
+          </NavLink>
+          <NavLink to="/community">
+            <li className="kollektif textwhite">community</li>{" "}
+          </NavLink>
+        </ul>
       </div>
 
       <div className="navbar-right">
         <ul>
-          <li className="kollektif nav-login textwhite">login</li>
+          <NavLink to="/login">
+            <li className="kollektif nav-login textwhite">login</li>
+          </NavLink>
 
-          <li className="kollektif nav-signup textwhite">sign up</li>
+          <NavLink to="/signup">
+            <li className="kollektif nav-signup textwhite">sign up</li>
+          </NavLink>
         </ul>
       </div>
     </div>

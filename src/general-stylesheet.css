@@ -90,7 +90,8 @@ button {
   padding: 0.5em 1em;
   min-width: 100px;
   font-family: "Kollektif", "Arial";
-  box-shadow: 0.5px 0.2px 5px rgb(68, 68, 68);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   cursor: pointer;
 }
 
@@ -144,6 +145,10 @@ IMPORTANT:
 
 .gidole {
   font-family: "Gidole";
+}
+
+.kollektif-italic {
+  font-family: "Kollektif-Italic";
 }
 
 /*----------------------BACKGROUND COLORS----------------------*/
