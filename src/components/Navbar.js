@@ -1,4 +1,5 @@
 import doggo_ci_final_6 from "../img/logo/doggo_ci_final_6.png";
+import { Switch, Route, Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,13 +8,22 @@ function Navbar() {
         <img src={doggo_ci_final_6} className="nav-logo" />
       </div>
       <div className="navbar-center">
-        <ul>
-          <li className="kollektif textred">home</li>
-
-          <li className="kollektif textwhite">doggo places</li>
-          <li className="kollektif textwhite">doggo sitting</li>
-          <li className="kollektif textwhite">community</li>
-        </ul>
+        <Switch>
+          <ul>
+            <li>
+              <Link to="/" className="kollektif textred">
+                home
+              </Link>
+            </li>
+            <li>
+              <Link to="/dogfriendlyplaces" className="kollektif textwhite">
+                doggo places
+              </Link>
+            </li>
+            <li className="kollektif textwhite">doggo sitting</li>
+            <li className="kollektif textwhite">community</li>
+          </ul>
+        </Switch>
       </div>
 
       <div className="navbar-right">

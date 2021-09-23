@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Dogfriendlyplaces from "./components/Dogfriendlyplaces";
+import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
+import PlacesHeader from "./components/places/PlacesHeader";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./components/Header.css";
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/dogfriendlyplaces">
+          <PlacesHeader />
           <Dogfriendlyplaces />
         </Route>
       </Switch>
