@@ -1,4 +1,5 @@
 import doggo_ci_final_6 from "../img/logo/doggo_ci_final_6.png";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -8,19 +9,31 @@ function Navbar() {
       </div>
       <div className="navbar-center">
         <ul>
-          <li className="kollektif textred">home</li>
+          <NavLink to="/">
+            <li className="kollektif textwhite">home</li>
+          </NavLink>
 
-          <li className="kollektif textwhite">doggo places</li>
-          <li className="kollektif textwhite">doggo sitting</li>
-          <li className="kollektif textwhite">community</li>
+          <NavLink to="/dogfriendlyplaces">
+            <li className="kollektif textwhite">doggo places</li>{" "}
+          </NavLink>
+          <NavLink to="/dogsitting">
+            <li className="kollektif textwhite">doggo sitting</li>{" "}
+          </NavLink>
+          <NavLink to="/community">
+            <li className="kollektif textwhite">community</li>{" "}
+          </NavLink>
         </ul>
       </div>
 
       <div className="navbar-right">
         <ul>
-          <li className="kollektif nav-login textwhite">login</li>
+          <NavLink to="/login">
+            <li className="kollektif nav-login textwhite">login</li>
+          </NavLink>
 
-          <li className="kollektif nav-signup textwhite">sign up</li>
+          <NavLink to="/signup">
+            <li className="kollektif nav-signup textwhite">sign up</li>
+          </NavLink>
         </ul>
       </div>
     </div>
