@@ -1,7 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Dogfriendlyplaces from "./components/Dogfriendlyplaces";
+import PlacesHeader from "./components/places/PlacesHeader";
+import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /*----------STYLESHEETS----------*/
