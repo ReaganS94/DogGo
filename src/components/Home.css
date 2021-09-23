@@ -2,7 +2,6 @@
 .about-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2em;
 }
 
 .about-left {
@@ -19,8 +18,11 @@
 
 /*-----------FAQ-----------*/
 .faq-container {
-  /* background-image: url(../img/transparent-background/4.png);
-  background-repeat: no-repeat; */
+  background-image: url(../img/transparent-background/4.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
+  background-color: #3699e2;
   padding: 1em;
   display: flex;
 }
@@ -38,11 +40,6 @@
   justify-content: center;
   width: 70%;
 }
-
-/* .faq-right h6 {
-  border: solid green;
-  width: 100%;
-} */
 
 .faq-numbers {
   display: flex;
@@ -79,6 +76,9 @@
 #answer3 {
   width: 70%;
   margin-left: 3em;
+  background-color: #f8fbfd;
+  padding: 1em;
+  border-radius: 10px;
 }
 
 .hide {

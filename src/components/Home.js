@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import Header from "./Header"
+import Header from "./Header";
 
 function Home() {
   const [hide1, setHide1] = useState(true);
@@ -54,14 +54,14 @@ function Home() {
       </div>
       <div className="faq-container">
         <div className="faq-left">
-          <h3 className="textred">faq</h3>
+          <h3 className="textwhite">faq</h3>
         </div>
         <div className="faq-right">
           <div className="numbers-container"></div>
           <div className="faq-text">
             <div id="question">
               <h5 className="faq-numbers">1</h5>
-              <p className="p1 kollektif" onClick={togglehide1}>
+              <p className="p1 kollektif textwhite" onClick={togglehide1}>
                 how much does it cost?
               </p>
             </div>
@@ -72,12 +72,12 @@ function Home() {
                 to our map. Beyond that, you will find people on dogGo, who will
                 gladly take care of your dog, in case there is no way for you to
                 take him with. Return the favor and build a network of dog
-                lovers in your area!{" "}
+                lovers in your area!
               </p>
             </div>
             <div id="question">
               <h5 className="faq-numbers">2</h5>
-              <p className="p1 kollektif" onClick={togglehide2}>
+              <p className="p1 kollektif textwhite" onClick={togglehide2}>
                 how do I know my dog is safe?
               </p>
             </div>
@@ -92,7 +92,7 @@ function Home() {
             </div>
             <div id="question">
               <h5 className="faq-numbers">3</h5>
-              <p className="p1 kollektif" onClick={togglehide3}>
+              <p className="p1 kollektif textwhite" onClick={togglehide3}>
                 how do I pin a new location?
               </p>
             </div>
