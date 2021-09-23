@@ -72,7 +72,7 @@ function Home() {
                 to our map. Beyond that, you will find people on dogGo, who will
                 gladly take care of your dog, in case there is no way for you to
                 take him with. Return the favor and build a network of dog
-                lovers in your area!{" "}
+                lovers in your area!
               </p>
             </div>
             <div id="question">
