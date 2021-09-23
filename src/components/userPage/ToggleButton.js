@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-const InputWrapper = styled.div`
+const InputWrapper = styled.label`
    position: relative;
 `
 
@@ -9,6 +9,25 @@ const Input= styled.input`
    position: absolute;
    left: -9999px; 
    top:-9999px; 
+
+   &:checked + span {
+      background-color: blue; 
+
+      &:before {
+         left:calc(100% - 2px);
+         transform: translateX(-100%);
+
+      }
+   }
+
+   &:focus + span {
+      box-shadow: 0 0 0 2px rgba(0 0 0 0.1); 
+
+   }
+
+   &:focus:checked + span {
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2); 
+   }
 
 `
 const Slider = styled.span`
@@ -19,7 +38,7 @@ const Slider = styled.span`
    border-radius: 100px; 
    background-color: black; 
    position: relative; 
-   transition: background-color 0.2s; 
+   transition: background-color 0.2s; box-shadow 0.2s; 
 
 
    &:before {
@@ -33,6 +52,10 @@ const Slider = styled.span`
    transition: 0.2s; 
    background: white; 
    box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2)
+   }
+
+   &:active:before {
+      width:28px;
    }
 
 `
