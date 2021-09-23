@@ -14,11 +14,11 @@ import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
 import "./components/Home.css";
+import "./components/HeaderUserProfile.css"
 
 function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route path="/dogfriendlyplaces">
           <PlacesHeader />

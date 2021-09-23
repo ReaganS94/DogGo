@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './UserProfile.css'
+import HeaderUserProfile from './HeaderUserProfile'
 import ToggleButton from './ToggleButton'
 
 function UserProfile() {
@@ -28,6 +29,7 @@ function UserProfile() {
 
     return (
     <div className="userProfile">
+        <HeaderUserProfile/>
         
         <div className="userDetails">
             <div className="userDetailsLeft backgroundred">

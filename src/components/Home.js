@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import Header from "./Header"
 
 function Home() {
   const [hide1, setHide1] = useState(true);
@@ -20,6 +21,7 @@ function Home() {
 
   return (
     <>
+      <Header />
       <div className="about-container" id="about">
         <div className="about-left">
           <h3 className="textyellow">about us</h3>
