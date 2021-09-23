@@ -3,6 +3,9 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import PlacesHeader from "./components/places/PlacesHeader";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
+import UserProfile from "./components/UserProfile"
+
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /*----------STYLESHEETS----------*/
@@ -25,6 +28,11 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route exact path="/userprofile">
+          <UserProfile />
         </Route>
       </Switch>
       <Footer />
