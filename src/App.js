@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import PlacesHeader from "./components/places/PlacesHeader";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
-import UserProfile from "./components/UserProfile"
+import UserProfile from "./components/userPage/UserProfile"
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -14,7 +14,7 @@ import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
 import "./components/Home.css";
-import "./components/HeaderUserProfile.css"
+import "./components/userPage/HeaderUserProfile.css"
 
 function App() {
   return (
