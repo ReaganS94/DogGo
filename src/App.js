@@ -1,22 +1,38 @@
-import Header from "./components/Header";
+import Header from "./components/home/Header";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import PlacesHeader from "./components/places/PlacesHeader";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
-import UserProfile from "./components/UserProfile"
+import UserProfile from "./components/userPage/UserProfile";
+import Dogprofile from "./components/dogprofile/Dogprofile";
 
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /*----------STYLESHEETS----------*/
-import "./components/Header.css";
+import "../src/components/home/Header.css";
 import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
-import "./components/Home.css";
-import "./components/HeaderUserProfile.css"
+import "../src/components/home/Home.css";
+import "../src/components/userPage/HeaderUserProfile.css";
+import "../src/components/dogprofile/Dogprofile.css";
 
 function App() {
+  const [dogs, setDogs] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`https://dry-temple-96625.herokuapp.com/dogs`)
+      .then((response) => {
+        setDogs(response.data.data);
+        console.log(response.data.data);
+      });
+  }, []);
+
+  if (!dogs) return null;
+
   return (
     <Router>
       <Switch>
@@ -33,6 +49,11 @@ function App() {
       <Switch>
         <Route exact path="/userprofile">
           <UserProfile />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/userprofile/dogprofile/:id">
+          <Dogprofile dogs={dogs} />
         </Route>
       </Switch>
       <Footer />

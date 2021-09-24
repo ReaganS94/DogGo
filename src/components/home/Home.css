@@ -11,14 +11,14 @@
 
 .about-right {
   width: 40%;
-  background-image: url(../img/other/5.png);
+  background-image: url(../../img/other/5.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /*-----------FAQ-----------*/
 .faq-container {
-  background-image: url(../img/transparent-background/4.png);
+  background-image: url(../../img/transparent-background/4.png);
   background-repeat: no-repeat;
   background-position: right;
   background-attachment: fixed;

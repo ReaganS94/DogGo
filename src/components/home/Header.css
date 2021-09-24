@@ -1,0 +1,20 @@
+.header {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  /* position: absolute;
+  top: 0px;
+  left: 0px; */
+  background-image: url("../../img/headerphotos/7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slogan {
+  margin: 1em;
+}
+
+.button-header {
+  margin-left: 1em;
+  width: 150px;
+}

@@ -1,11 +1,11 @@
-.header {
-  height: 600px;
+.headerUserProfile {
+  height: 350px;
   width: 100%;
   position: relative;
   /* position: absolute;
-  top: 0px;
-  left: 0px; */
-  background-image: url("../img/headerphotos/7.jpg");
+    top: 0px;
+    left: 0px; */
+  background-image: url("../../img/headerphotos/12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
