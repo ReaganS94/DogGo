@@ -6,7 +6,7 @@ import ToggleButton from './ToggleButton'
 
 function UserProfile() {
 
-const [user, setUsers] = useState([]); 
+/*const [user, setUsers] = useState([]); 
     
 useEffect(() => {
         axios
@@ -18,6 +18,7 @@ useEffect(() => {
           .catch((err) => console.log(err));
       }, []);
     
+     */ 
    
 
   const [toggled, setToggled] = useState(false); 
@@ -32,15 +33,15 @@ useEffect(() => {
         
         <div className="userDetails">
             <div className="userDetailsLeft backgroundred">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2459&q=80" width="200px"/>
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2459&q=80" className="profilePic"/>
               <h6>location</h6>
               <h6>contact</h6>
             </div>
 
             <div className="userDetailsMiddle backgroundyellow">
-                  <h5>{user[0].username}</h5>
+                  <h5>name</h5>
                   <h6>about</h6>
-                  <p>{user[0].about}</p>
+                  <p>text</p>
             </div> 
 
             <div className="userDetailsRight backgroundblue">
@@ -51,7 +52,7 @@ useEffect(() => {
 
 
         <div className="linkedDogs">
-             <img src={user[0].dog} width="200px"/>
+             <img src="https://images.unsplash.com/photo-1610312287759-a7aae807b165?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80" width="200px"/>
              <img src="https://images.unsplash.com/photo-1610312287759-a7aae807b165?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80" width="200px"/>
              <img src="https://images.unsplash.com/photo-1610312287759-a7aae807b165?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1156&q=80" width="200px"/>
         </div>
