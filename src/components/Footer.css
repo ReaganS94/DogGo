@@ -2,7 +2,7 @@
     display: flex; 
     width: 100%; 
     height: 100%; 
-    background-color:#3699E2;
+    background-color: #DC3C4D;
     justify-content: center; 
     align-items:center; 
     margin: 0 auto; 
@@ -27,7 +27,7 @@
     width: 40px; 
     height: 40px; 
     margin: 0 2%; 
-    color: #3699E2;
+    color: #DC3C4D;
     border-radius: 50%;
     border: 1px solid #f8fbfd; 
     background-color: #f8fbfd; 
@@ -47,7 +47,7 @@
     font-size: 20px;
     font-weight: bold; 
     color:#f8fbfd;
-    margin: 0 2%; 
+    margin: 0 auto; 
 }
 
 .footerKeeper {
