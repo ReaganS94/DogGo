@@ -9,21 +9,23 @@ import logo from '../img/logo/logo_redyellow.png'
 function Footer() {
     return (
     <>
-     <div className="footer">
+     <div className="footer effect7">
        <div className="logo">
          <img src={logo}/>  
          <p>join the community</p>
        </div>
-       <div className="socialMedia">
+       <div className="footerContent">
+          <div className="socialMedia">
              <TiSocialFacebook className="icon"/>
              <AiOutlineInstagram className="icon"/>
              <TiSocialTwitter className="icon"/>
              <TiSocialPinterest className="icon"/> 
-       </div>
-       <div className="footerContent">
+          </div>
+         <div className="footerInfo">
              <p>Copyright &copy; 2021</p>
              <p>Terms and Conditions</p>
              <p>Privacy Policy</p>
+         </div>
        </div>
     </div>
     </>
