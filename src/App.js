@@ -52,7 +52,7 @@ function App() {
         </Route>
       </Switch>
       <Switch>
-        <Route path="/userprofile/dogprofile/:id">
+        <Route path="/dogprofile/:id">
           <Dogprofile dogs={dogs} />
         </Route>
       </Switch>
