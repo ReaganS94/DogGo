@@ -1,7 +1,14 @@
+import Navbar from "../../components/Navbar";
+
 function PlacesHeader() {
   return (
-    <div>
-      <h1>header for places</h1>
+    <div className="headerPlaces">
+      <Navbar />
+      <p className="textwhite p1 slogan">So you can go places together</p>
+
+      <a href="#about">
+        <button className="button-header p3">learn more</button>
+      </a>
     </div>
   );
 }

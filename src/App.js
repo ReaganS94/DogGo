@@ -1,27 +1,25 @@
-import Header from "./components/Header";
+import Header from "./components/home/Header";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import PlacesHeader from "./components/places/PlacesHeader";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
-import UserProfile from "./components/UserProfile"
-
+import UserProfile from "./components/userPage/UserProfile";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /*----------STYLESHEETS----------*/
-import "./components/Header.css";
+import "./components/home/Header.css";
 import "./components/Navbar.css";
 import "./App.css";
 import "./general-stylesheet.css";
-import "./components/Home.css";
-import "./components/HeaderUserProfile.css"
+import "./components/home/Home.css";
+import "./components/userPage/HeaderUserProfile.css";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/dogfriendlyplaces">
-          <PlacesHeader />
           <Dogfriendlyplaces />
         </Route>
       </Switch>
