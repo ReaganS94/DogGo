@@ -1,5 +1,5 @@
 .headerUserProfile {
-    height: 350px;
+    height: 400px;
     width: 100%;
    position: relative;
     /* position: absolute;
@@ -8,6 +8,7 @@
     background-image: url(/src/img/headerphotos/16.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 10% 20%;
   }
 
   
