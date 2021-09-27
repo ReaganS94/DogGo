@@ -11,7 +11,7 @@
 
 .dogprofile-top {
   display: flex;
-  padding: 1em;
+  padding: 1em 6em;
 }
 
 .dogprofilepic {
@@ -114,6 +114,22 @@
   border-radius: 50%;
   margin-bottom: 1em;
 }
+
+/*----------------------------------ARRAYS----------------------------------*/
+
+.dogarray-container {
+  padding: 0 6em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.dogarray-character h6,
+.dogarray-commands h6 {
+  margin-right: 0.5em;
+  display: inline;
+}
+
 /* 
 Blue (primary): #3699E2
 Yellow: #F4C34D

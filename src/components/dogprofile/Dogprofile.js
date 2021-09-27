@@ -26,7 +26,6 @@ function Dogprofile({ dogs }) {
             </div>
           ))}
       </div>
-      <div>Test</div>
     </>
   );
 }
