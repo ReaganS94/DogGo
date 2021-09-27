@@ -7,7 +7,10 @@ import Search from "./Search";
 function Map() {
   return (
     <div className="container">
-      <LocationsList />
+      <div className="locations">
+        <LocationsList />
+      </div>
+
       <div className="leaflet-container">
         <MapContainer
           center={[52.52, 13.405]}
