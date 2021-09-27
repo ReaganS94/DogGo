@@ -1,7 +1,5 @@
-import Header from "./components/home/Header";
 import Footer from "./components/Footer";
 import Home from "./components/home/Home";
-import PlacesHeader from "./components/places/PlacesHeader";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
 import UserProfile from "./components/userPage/UserProfile";
 
