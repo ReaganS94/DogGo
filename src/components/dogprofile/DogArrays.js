@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
-function DogArrays({ dogs }) {
+function DogArrays({ dog }) {
   const { id } = useParams();
-  const dog = dogs.find((dog) => dog._id === id);
+
   return (
     <div className="dogarray-container">
       <div className="dogarray-character">

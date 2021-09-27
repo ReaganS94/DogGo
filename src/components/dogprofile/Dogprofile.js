@@ -8,9 +8,11 @@ import DogBooleans from "./DogBooleans";
 
 import Navbar from "../Navbar";
 
-function Dogprofile({ dogs }) {
+function Dogprofile() {
+  const [dog, setDog] = useState();
   const { id } = useParams();
-  const [dog, setDog] = useState([]);
+
+  console.log("test");
 
   useEffect(() => {
     axios
@@ -29,17 +31,16 @@ function Dogprofile({ dogs }) {
         <p className="textwhite p1 slogan">So you can go places together</p>
       </div>
 
-      <div className="dogprofile-container">
-        {dogs
-          .filter((dog) => dog._id === id)
-          .map((dog) => (
-            <div>
-              <DogAbout dogs={dogs} />
-              <DogBooleans dogs={dogs} />
-              <DogArrays dogs={dogs} />
-            </div>
-          ))}
-      </div>
+      {dog && (
+        <div className="dogprofile-container">
+          <div>
+            <DogAbout dog={dog} />
+            <DogBooleans dog={dog} />
+            <DogArrays dog={dog} />
+          </div>
+          )
+        </div>
+      )}
     </>
   );
 }
