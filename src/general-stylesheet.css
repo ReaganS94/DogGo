@@ -103,9 +103,9 @@ button.buttonblue {
   background-color: #3699e2;
 }
 
-button.buttonblue:hover {
+/* button.buttonblue:hover {
   background-color: #60a9dd;
-}
+} */
 
 /*----------------------TEXT COLORS----------------------*/
 /* The default color for text is dark grey but can be

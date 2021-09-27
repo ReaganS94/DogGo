@@ -1,0 +1,137 @@
+.headerdogprofile {
+  height: 400px;
+  width: 100%;
+  background-image: url("../../img/headerphotos/20.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 30%;
+}
+
+/*----------------------------------TOP PROFILE----------------------------------*/
+
+.dogprofile-top {
+  display: flex;
+  padding: 1em 6em;
+}
+
+.dogprofilepic {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dogprofilepic img {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.dogprofiletop-right {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.nameandfacts {
+  display: flex;
+  height: 90px;
+}
+
+.dogname {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  width: 40%;
+}
+
+.dogkeyfacts {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  /* background-color: #dc3c4d; */
+}
+
+.age,
+.breed,
+.size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* border-radius: 30px;
+  background-color: #dc3c4d;
+  padding: 0 1em; */
+}
+
+.dogprofilepic img {
+  height: 200px;
+}
+
+/*----------------------------------ABOUT----------------------------------*/
+.aboutme-dog {
+  width: 60%;
+  line-height: 20px;
+  padding-left: 1em;
+}
+
+/*----------------------------------BOOLEANS----------------------------------*/
+
+.boolean-container {
+  background-color: #f4c34d;
+  display: flex;
+  margin: 1em 0 2em 0;
+}
+
+.booleans {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.boolean-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20%;
+}
+
+.boolean-icon-yes {
+  width: 30px;
+  height: 30px;
+  background-color: #3699e2;
+  color: #f8fbfd;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.boolean-icon-no {
+  width: 30px;
+  height: 30px;
+  background-color: #dc3c4d;
+  color: #f8fbfd;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+/*----------------------------------ARRAYS----------------------------------*/
+
+.dogarray-container {
+  padding: 0 6em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.dogarray-character h6,
+.dogarray-commands h6 {
+  margin-right: 0.5em;
+  display: inline;
+}
+
+/* 
+Blue (primary): #3699E2
+Yellow: #F4C34D
+Red: #DC3C4D 
+Offwhite: #F8FBFD*/
