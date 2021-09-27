@@ -35,14 +35,13 @@ useEffect(() => {
         <div className="userDetails backgroundred">
             <div className="userDetailsLeft ">
               <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2459&q=80" className="profilePic"/>
-              <p>location</p>
-              <p>contact</p>
+              <p>{user.city}</p>
+              <p>{user.contacts}</p>
             </div>
 
             <div className="userDetailsMiddle">
-                  <h6>{user.username}</h6>
-                  <p>about</p>
-                  <p>text</p>
+                  <h5>{user.username}</h5>
+                  <h6>{user.about}</h6>
             </div> 
 
             <div className="userDetailsRight">
