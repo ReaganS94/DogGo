@@ -7,9 +7,6 @@ function ConnectedDogs({dog}) {
     return (
       <div className="linkedDogs">
        {dog.map((dog => <img src={dog.profilePic} />))};
-
-      <img src={dog.profilePic} />
-     
       </div>
 
     )
