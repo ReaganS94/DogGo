@@ -66,7 +66,6 @@ function DogBooleans({ dog }) {
           </div>
         </div>
       </div>
-      ))
     </>
   );
 }

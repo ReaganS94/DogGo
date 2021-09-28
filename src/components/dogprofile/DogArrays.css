@@ -1,0 +1,14 @@
+/*----------------------------------ARRAYS----------------------------------*/
+
+.dogarray-container {
+  padding: 0 6em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.dogarray-character h6,
+.dogarray-commands h6 {
+  margin-right: 0.5em;
+  display: inline;
+}

@@ -1,0 +1,40 @@
+/*----------------------------------BOOLEANS----------------------------------*/
+
+.boolean-container {
+  background-color: #f4c34d;
+  display: flex;
+  margin: 1em 0 2em 0;
+}
+
+.booleans {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.boolean-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20%;
+}
+
+.boolean-icon-yes {
+  width: 30px;
+  height: 30px;
+  background-color: #3699e2;
+  color: #f8fbfd;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.boolean-icon-no {
+  width: 30px;
+  height: 30px;
+  background-color: #dc3c4d;
+  color: #f8fbfd;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}

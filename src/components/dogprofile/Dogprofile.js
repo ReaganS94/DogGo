@@ -5,6 +5,7 @@ import axios from "axios";
 import DogAbout from "./DogAbout";
 import DogArrays from "./DogArrays";
 import DogBooleans from "./DogBooleans";
+import DogGallery from "./DogGallery";
 
 import Navbar from "../Navbar";
 
@@ -37,8 +38,8 @@ function Dogprofile() {
             <DogAbout dog={dog} />
             <DogBooleans dog={dog} />
             <DogArrays dog={dog} />
+            <DogGallery dog={dog} />
           </div>
-          )
         </div>
       )}
     </>
