@@ -1,37 +1,38 @@
-import React from 'react'; 
-import {TiSocialFacebook, TiSocialTwitter, TiSocialPinterest} from 'react-icons/ti'; 
-import {AiOutlineInstagram} from 'react-icons/ai';
-import "./Footer.css"
+import React from "react";
+import {
+  TiSocialFacebook,
+  TiSocialTwitter,
+  TiSocialPinterest,
+} from "react-icons/ti";
+import { AiOutlineInstagram } from "react-icons/ai";
+import "./Footer.css";
 
-import dog from '../img/transparent-background/18.png'
-import logo from '../img/logo/logo_redyellow.png'
+import logo from "../img/logo/logo_redyellow.png";
 
 function Footer() {
-    return (
+  return (
     <>
-     <div className="footer effect7">
-       <div className="logo">
-         <img src={logo}/>  
-         <p>join the community</p>
-       </div>
-       <div className="footerContent">
+      <div className="footer effect7">
+        <div className="logo">
+          <img src={logo} />
+          <p>join the community</p>
+        </div>
+        <div className="footerContent">
           <div className="socialMedia">
-             <TiSocialFacebook className="icon"/>
-             <AiOutlineInstagram className="icon"/>
-             <TiSocialTwitter className="icon"/>
-             <TiSocialPinterest className="icon"/> 
+            <TiSocialFacebook className="icon" />
+            <AiOutlineInstagram className="icon" />
+            <TiSocialTwitter className="icon" />
+            <TiSocialPinterest className="icon" />
           </div>
-         <div className="footerInfo">
-             <p>Copyright &copy; 2021</p>
-             <p>Terms and Conditions</p>
-             <p>Privacy Policy</p>
-         </div>
-       </div>
-    </div>
+          <div className="footerInfo">
+            <p>Copyright &copy; 2021</p>
+            <p>Terms and Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+      </div>
     </>
-   
-    )
+  );
 }
 
-
-export default Footer; 
+export default Footer;

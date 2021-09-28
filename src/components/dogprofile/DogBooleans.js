@@ -2,74 +2,71 @@ import { useParams } from "react-router-dom";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-function DogBooleans({ dogs }) {
+function DogBooleans({ dog }) {
   const { id } = useParams();
   return (
     <>
-      {dogs
-        .filter((dog) => dog._id === id)
-        .map((dog) => (
-          <div className="boolean-container">
-            <div className="booleans">
-              <div className="boolean-answer">
-                <p className="p1">kidfriendly</p>
+      <div className="boolean-container">
+        <div className="booleans">
+          <div className="boolean-answer">
+            <p className="p1">kidfriendly</p>
+            <div>
+              {dog.kidFriendly == true ? (
                 <div>
-                  {dog.kidFriendly == true ? (
-                    <div>
-                      {" "}
-                      <AiOutlineCheckCircle className="boolean-icon-yes" />
-                    </div>
-                  ) : (
-                    <div>
-                      <AiOutlineCloseCircle className="boolean-icon-no" />
-                    </div>
-                  )}
+                  {" "}
+                  <AiOutlineCheckCircle className="boolean-icon-yes" />
                 </div>
-              </div>
-              <div className="boolean-answer">
-                <p className="p1">catfriendly</p>
-                {dog.catFriendly == true ? (
-                  <div>
-                    {" "}
-                    <AiOutlineCheckCircle className="boolean-icon-yes" />
-                  </div>
-                ) : (
-                  <div>
-                    <AiOutlineCloseCircle className="boolean-icon-no" />
-                  </div>
-                )}
-              </div>
-              <div className="boolean-answer">
-                <p className="p1">allergies</p>
-                {dog.allergies == true ? (
-                  <div>
-                    {" "}
-                    <AiOutlineCheckCircle className="boolean-icon-yes" />
-                  </div>
-                ) : (
-                  <div>
-                    <AiOutlineCloseCircle className="boolean-icon-no" />
-                  </div>
-                )}
-              </div>
-              <div className="boolean-answer">
-                <p className="p1">castrated</p>
+              ) : (
                 <div>
-                  {dog.castrated == true ? (
-                    <div>
-                      {" "}
-                      <AiOutlineCheckCircle className="boolean-icon-yes" />
-                    </div>
-                  ) : (
-                    <div>
-                      <AiOutlineCloseCircle className="boolean-icon-no" />
-                    </div>
-                  )}
+                  <AiOutlineCloseCircle className="boolean-icon-no" />
                 </div>
-              </div>
+              )}
             </div>
           </div>
-        ))}
+          <div className="boolean-answer">
+            <p className="p1">catfriendly</p>
+            {dog.catFriendly == true ? (
+              <div>
+                {" "}
+                <AiOutlineCheckCircle className="boolean-icon-yes" />
+              </div>
+            ) : (
+              <div>
+                <AiOutlineCloseCircle className="boolean-icon-no" />
+              </div>
+            )}
+          </div>
+          <div className="boolean-answer">
+            <p className="p1">allergies</p>
+            {dog.allergies == true ? (
+              <div>
+                {" "}
+                <AiOutlineCheckCircle className="boolean-icon-yes" />
+              </div>
+            ) : (
+              <div>
+                <AiOutlineCloseCircle className="boolean-icon-no" />
+              </div>
+            )}
+          </div>
+          <div className="boolean-answer">
+            <p className="p1">castrated</p>
+            <div>
+              {dog.castrated == true ? (
+                <div>
+                  {" "}
+                  <AiOutlineCheckCircle className="boolean-icon-yes" />
+                </div>
+              ) : (
+                <div>
+                  <AiOutlineCloseCircle className="boolean-icon-no" />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      ))
     </>
   );
 }
