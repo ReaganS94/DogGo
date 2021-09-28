@@ -1,4 +1,5 @@
-{"name": "doggo",
+{
+  "name": "doggo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +16,6 @@
     "icons": "^1.0.0",
     "leaflet": "^1.7.1",
     "leaflet-geosearch": "^3.5.0",
-    "material-ui-icons": "^1.0.0-beta.36",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
