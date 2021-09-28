@@ -7,14 +7,16 @@ function DogArrays({ dog }) {
     <div className="dogarray-container">
       <div className="dogarray-character">
         <h6>character:</h6>
+
         {dog.character.map((character) => (
-          <button className="buttonblue">{character}</button>
+          <button className="buttonblue">{character.character}</button>
         ))}
       </div>
       <div className="dogarray-commands">
         <h6>commands:</h6>
+
         {dog.commands.map((command) => (
-          <button className="buttonblue">{command}</button>
+          <button className="buttonblue">{command.name}</button>
         ))}
       </div>
     </div>
