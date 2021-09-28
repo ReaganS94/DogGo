@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
+import "./DogBooleans.css";
+
 function DogBooleans({ dog }) {
   const { id } = useParams();
   return (

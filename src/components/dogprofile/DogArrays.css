@@ -1,14 +1,37 @@
 /*----------------------------------ARRAYS----------------------------------*/
 
 .dogarray-container {
-  padding: 0 6em;
-  padding-bottom: 3em;
+  padding: 1em 6em;
   display: flex;
   flex-direction: column;
+  margin: 2em 0;
 }
 
 .dogarray-character h6,
 .dogarray-commands h6 {
   margin-right: 0.5em;
   display: inline;
+}
+
+.dogarray-character,
+.dogarray-commands {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.array-box-text {
+  width: 20%;
+  margin-right: 1em;
+}
+
+.array-box-array {
+  width: 80%;
+}
+
+.arraybuttons {
+  font-size: 1em;
+  text-transform: lowercase;
+  margin-right: 1em;
+  width: 16%;
 }

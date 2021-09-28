@@ -27,7 +27,7 @@ function Dogprofile() {
 
   return (
     <>
-      <div className="headerdogprofile">
+      <div className="headerdogprofile" id="dogprofiletop">
         <Navbar />
         <p className="textwhite p1 slogan">So you can go places together</p>
       </div>
