@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 const InputWrapper = styled.label`
    position: relative;
-   margin-top: 3rem;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
 `
 
 const Input= styled.input`
@@ -12,7 +13,7 @@ const Input= styled.input`
    top:-9999px; 
 
    &:checked + span {
-      background-color: blue; 
+      background-color: #DC3C4D; 
 
       &:before {
          left:calc(100% - 2px);
@@ -37,7 +38,7 @@ const Slider = styled.span`
    width:50px; 
    height: 25px; 
    border-radius: 100px; 
-   background-color: black; 
+   background-color: #2E2E2E; 
    position: relative; 
    transition: background-color 0.2s; box-shadow 0.2s; 
 
