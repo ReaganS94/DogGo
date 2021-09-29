@@ -1,3 +1,16 @@
 {
-  "cSpell.ignoreWords": ["Dogfriendlyplaces", "geosearch", "latlng"]
+  "cSpell.ignoreWords": [
+    "Dogfriendlyplaces",
+    "backtoparent",
+    "geosearch",
+    "latlng"
+  ],
+  "cSpell.words": [
+    "buttonblue",
+    "dogarray",
+    "dogprofile",
+    "Dogprofile",
+    "headerdogprofile",
+    "textwhite"
+  ]
 }

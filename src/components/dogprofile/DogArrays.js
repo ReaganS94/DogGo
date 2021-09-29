@@ -1,7 +1,6 @@
 import "./DogArrays.css";
 
 function DogArrays({ dog }) {
-
   return (
     <div className="dogarray-container">
       <div className="dogarray-character">
