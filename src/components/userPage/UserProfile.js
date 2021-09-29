@@ -5,7 +5,8 @@ import './UserProfile.css'
 import HeaderUserProfile from './HeaderUserProfile'
 import ConnectedDogs from './ConnectedDogs'
 import UserDetails from './UserDetails'
-// import { unstable_renderSubtreeIntoContainer } from 'react-dom';
+
+import walkingDog from './9.svg'
 
 
 function UserProfile() {
