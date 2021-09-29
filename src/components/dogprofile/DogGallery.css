@@ -1,0 +1,40 @@
+/*----------------------------------DOG GALLERY----------------------------------*/
+.doggallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3699e2;
+}
+
+.dog-gallery-box {
+  width: 60%;
+  margin-bottom: 4em;
+  background-color: white;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+
+.pawprint-gallery {
+  width: 7%;
+  margin-top: -4%;
+}
+
+.doggalleryphoto {
+  cursor: pointer;
+}
+
+.doggalleryphoto:hover {
+  cursor: pointer;
+  scale: 1.5;
+}
+
+.buttonbacktop {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+/* 
+  Blue (primary): #3699E2
+  Yellow: #F4C34D
+  Red: #DC3C4D 
+  Offwhite: #F8FBFD*/
