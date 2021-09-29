@@ -1,10 +1,6 @@
-import { useParams } from "react-router-dom";
-
 import "./DogArrays.css";
 
 function DogArrays({ dog }) {
-  const { id } = useParams();
-
   return (
     <div className="dogarray-container">
       <div className="dogarray-character">

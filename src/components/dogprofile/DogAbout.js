@@ -1,14 +1,11 @@
-import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function DogAbout({ dog }) {
-  const { id } = useParams();
-
   return (
     <>
       <div className="dogprofile-top">
         <div className="dogprofilepic">
-          <img src={dog.profilePic} />
+          <img src={dog.profilePic} alt={dog.name} />
         </div>
 
         <div className="dogprofiletop-right">
@@ -42,9 +39,9 @@ function DogAbout({ dog }) {
               <img src={dog.user.profilePic} />
 
               <div>
-                <NavLink to="/userprofile/:id">
+                <Link to="/userprofile/:id">
                   <button className="backtoparent">back to my parent</button>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>

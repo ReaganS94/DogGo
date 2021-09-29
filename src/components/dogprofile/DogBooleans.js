@@ -1,11 +1,9 @@
-import { useParams } from "react-router-dom";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 import "./DogBooleans.css";
 
 function DogBooleans({ dog }) {
-  const { id } = useParams();
   return (
     <>
       <div className="boolean-container">
@@ -13,7 +11,7 @@ function DogBooleans({ dog }) {
           <div className="boolean-answer">
             <p className="p1">kidfriendly</p>
             <div>
-              {dog.kidFriendly == true ? (
+              {dog.kidFriendly === true ? (
                 <div>
                   {" "}
                   <AiOutlineCheckCircle className="boolean-icon-yes" />
@@ -27,7 +25,7 @@ function DogBooleans({ dog }) {
           </div>
           <div className="boolean-answer">
             <p className="p1">catfriendly</p>
-            {dog.catFriendly == true ? (
+            {dog.catFriendly === true ? (
               <div>
                 {" "}
                 <AiOutlineCheckCircle className="boolean-icon-yes" />
@@ -40,7 +38,7 @@ function DogBooleans({ dog }) {
           </div>
           <div className="boolean-answer">
             <p className="p1">allergies</p>
-            {dog.allergies == true ? (
+            {dog.allergies === true ? (
               <div>
                 {" "}
                 <AiOutlineCheckCircle className="boolean-icon-yes" />
@@ -54,7 +52,7 @@ function DogBooleans({ dog }) {
           <div className="boolean-answer">
             <p className="p1">castrated</p>
             <div>
-              {dog.castrated == true ? (
+              {dog.castrated === true ? (
                 <div>
                   {" "}
                   <AiOutlineCheckCircle className="boolean-icon-yes" />
