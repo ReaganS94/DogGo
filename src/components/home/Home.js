@@ -54,7 +54,7 @@ function Home() {
       </div>
       <div className="faq-container">
         <div className="faq-left">
-          <h3 className="textwhite">faq</h3>
+          <h2 className="textwhite">faq</h2>
         </div>
         <div className="faq-right">
           <div className="numbers-container"></div>

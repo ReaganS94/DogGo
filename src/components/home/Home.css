@@ -7,6 +7,7 @@
 .about-left {
   padding: 1em 1.5em;
   width: 60%;
+  margin-bottom: 3em;
 }
 
 .about-right {
@@ -20,8 +21,8 @@
 .faq-container {
   background-image: url(../../img/transparent-background/4.png);
   background-repeat: no-repeat;
-  background-position: right;
-  background-attachment: fixed;
+  background-position: 100% -100%;
+  background-attachment: scroll;
   background-color: #3699e2;
   padding: 1em;
   display: flex;

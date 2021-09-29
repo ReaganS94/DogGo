@@ -14,7 +14,7 @@ function Footer() {
     <>
       <div className="footer effect7">
         <div className="logo">
-          <img src={logo} />
+          <img src={logo} alt="logo" />
           <p>join the community</p>
         </div>
         <div className="footerContent">
