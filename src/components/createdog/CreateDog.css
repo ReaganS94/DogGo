@@ -1,0 +1,75 @@
+.createdog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.createdog-header {
+  height: 400px;
+  width: 100%;
+  background-image: url("../../img/headerphotos/24.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.createdog-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*------------------------------------FORM----------------------------------------*/
+
+.createdog-form {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 3em;
+  display: flex;
+}
+
+.createdog-inputfields {
+  border: solid orange;
+  display: flex;
+}
+
+/*------------------------------------FORM----------------------------------------*/
+
+.createdog-booleans {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 5em;
+  border-bottom: solid 2px rgb(231, 231, 231);
+}
+/* 
+.createdog-booleans-column {
+  border: solid green;
+} */
+
+/*------------------------------------ARRAYS----------------------------------------*/
+.createdog-arrays {
+  display: flex;
+  padding: 1em 4em;
+  border-bottom: solid 2px rgb(231, 231, 231);
+}
+
+/* .createdog-character {
+  border: solid lightcoral;
+  display: flex;
+}
+
+.createdogarray-left {
+  border: solid blue;
+}
+
+.createdogarray-right {
+  border: solid cyan;
+} */
+
+.createdog-bottom {
+  border: solid green;
+}
+/* 
+  Blue (primary): #3699E2
+  Yellow: #F4C34D
+  Red: #DC3C4D 
+  Offwhite: #F8FBFD*/
