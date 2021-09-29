@@ -21,8 +21,8 @@
 .faq-container {
   background-image: url(../../img/transparent-background/4.png);
   background-repeat: no-repeat;
-  background-position: 100% -100%;
-  background-attachment: scroll;
+  background-position: 100%;
+  background-attachment: fixed;
   background-color: #3699e2;
   padding: 1em;
   display: flex;

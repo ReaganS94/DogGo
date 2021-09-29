@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 import "./DogBooleans.css";
 
 function DogBooleans({ dog }) {
-  const { id } = useParams();
+  // const { id } = useParams();
   return (
     <>
       <div className="boolean-container">

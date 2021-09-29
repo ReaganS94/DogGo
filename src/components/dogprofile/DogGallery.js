@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -8,7 +8,7 @@ import paw from "../../img/transparent-background/12.png";
 import "./DogGallery.css";
 
 function DogGallery({ dog }) {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   const scrollToTop = () => {
     window.scrollTo({
