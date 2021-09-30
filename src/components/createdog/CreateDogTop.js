@@ -10,7 +10,6 @@ function CreateDogTop() {
       </div>
 
       <div className="createdog-top">
-        Text blabla
         <h2>add your doggo:</h2>
       </div>
     </>

@@ -23,7 +23,6 @@
 .createdog-form {
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 3em;
   display: flex;
 }
 
@@ -32,7 +31,7 @@
   display: flex;
 }
 
-/*------------------------------------FORM----------------------------------------*/
+/*------------------------------------BOOLEANS----------------------------------------*/
 
 .createdog-booleans {
   display: flex;
@@ -40,10 +39,6 @@
   padding: 1em 5em;
   border-bottom: solid 2px rgb(231, 231, 231);
 }
-/* 
-.createdog-booleans-column {
-  border: solid green;
-} */
 
 /*------------------------------------ARRAYS----------------------------------------*/
 .createdog-arrays {
@@ -52,22 +47,31 @@
   border-bottom: solid 2px rgb(231, 231, 231);
 }
 
-/* .createdog-character {
-  border: solid lightcoral;
-  display: flex;
-}
-
-.createdogarray-left {
-  border: solid blue;
-}
-
-.createdogarray-right {
-  border: solid cyan;
-} */
+/*------------------------------------BOTTOM----------------------------------------*/
 
 .createdog-bottom {
-  border: solid green;
+  margin: 0 auto;
+  margin-bottom: 3em;
 }
+
+.submitbutton {
+  background-color: #dc3c4d;
+  color: #f8fbfd;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  min-width: 100px;
+  font-family: "Kollektif", "Arial";
+  font-size: 1em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  background-color: #d65d69;
+}
+
 /* 
   Blue (primary): #3699E2
   Yellow: #F4C34D
