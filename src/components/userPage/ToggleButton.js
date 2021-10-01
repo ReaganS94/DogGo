@@ -11,6 +11,7 @@ const Input= styled.input`
    position: absolute;
    left: -9999px; 
    top:-9999px; 
+ 
 
    &:checked + span {
       background-color: #DC3C4D; 
