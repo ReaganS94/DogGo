@@ -1,30 +1,19 @@
 import "./CreateDog.css";
 
-import { styled } from "@mui/material/styles";
+import ProfilePicList from "../createdog/DropZones/ProfilePicList";
+import DropZoneProfile from "../createdog/DropZones/DropZoneProfile";
 
-import IconButton from "@mui/material/IconButton";
-import PhotoCamera from "@mui/icons-material/PhotoCamera";
-import Stack from "@mui/material/Stack";
-
-const Input = styled("input")({
-  display: "none",
-});
-
-function CreateDogPic() {
+function CreateDogPic({ onDrop, profilepic }) {
   return (
-    <div>
-      <Stack direction="row" alignItems="center" spacing={2}>
-        <label htmlFor="icon-button-file">
-          <Input accept="image/*" id="icon-button-file" type="file" />
-          <IconButton
-            color="primary"
-            aria-label="upload picture"
-            component="span"
-          >
-            <PhotoCamera />
-          </IconButton>
-        </label>
-      </Stack>
+    <div className="profilepic-div">
+      <DropZoneProfile
+        onDrop={onDrop}
+        accept={"image/*"}
+        className={"profilepic-container"}
+        classNameImg={"profilepic-img"}
+      />
+
+      <ProfilePicList profilepic={profilepic} />
     </div>
   );
 }

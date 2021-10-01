@@ -1,8 +1,8 @@
-import "./CreateDog.css";
+import "../CreateDog.css";
 import "./DropZone.css";
 
-import upload from "../../img/dragdrop/upload3.png";
-import uploadactive from "../../img/dragdrop/upload4.png";
+import upload from "../../../img/dragdrop/upload3.png";
+import uploadactive from "../../../img/dragdrop/upload4.png";
 
 import { useDropzone } from "react-dropzone";
 
@@ -14,14 +14,10 @@ function DropZone({
   textdefault,
   textactive,
 }) {
-  // const onDrop = useCallback((acceptedFiles) => {
-  //   // alert("successful");
-
-  // }, []);
-  // const { getRootProps, getInputProps, isDragActive } = useDropzone({});
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept,
+    multiple: false,
   });
 
   return (

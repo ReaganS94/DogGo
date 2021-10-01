@@ -7,11 +7,11 @@ import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 
-function CreateDogArrays() {
+function CreateDogCommands() {
   return (
-    <div className="createdog-arrays">
-      <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">character</FormLabel>
+    <div className="createdog-commands-array ">
+      <FormControl sx={{ m: 7 }} component="fieldset" variant="standard">
+        <FormLabel component="legend">commands</FormLabel>
         <FormGroup>
           <div className="createdog-character">
             <FormControlLabel
@@ -19,50 +19,50 @@ function CreateDogArrays() {
                 <Checkbox
                   // // checked={jason}
                   // onChange={handleChange}
-                  name="calm"
+                  name="sit"
                 />
               }
-              label="calm"
+              label="sit"
             />
             <FormControlLabel
               control={
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="easy going"
+                  name="come"
                 />
               }
-              label="easy going"
+              label="come"
             />
             <FormControlLabel
               control={
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="courageous"
+                  name="paw"
                 />
               }
-              label="courageous"
+              label="paw"
             />
             <FormControlLabel
               control={
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="territorial"
+                  name="stop"
                 />
               }
-              label="territorial"
+              label="stop"
             />
             <FormControlLabel
               control={
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="intelligent"
+                  name="stay"
                 />
               }
-              label="intelligent"
+              label="stay"
             />
 
             <FormControlLabel
@@ -70,61 +70,20 @@ function CreateDogArrays() {
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="patient"
+                  name="bring"
                 />
               }
-              label="patient"
-            />
-
-            <FormControlLabel
-              control={
-                <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
-                  name="loyal"
-                />
-              }
-              label="loyal"
+              label="bring"
             />
             <FormControlLabel
               control={
                 <Checkbox
                   // checked={antoine}
                   // onChange={handleChange}
-                  name="affectionate"
+                  name="down"
                 />
               }
-              label="affectionate"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
-                  name="hyper active"
-                />
-              }
-              label="hyper active"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
-                  name="anxious"
-                />
-              }
-              label="anxious"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  // // checked={gilad}
-                  // onChange={handleChange}
-                  name="aggressive"
-                />
-              }
-              label="aggressive"
+              label="down"
             />
           </div>
         </FormGroup>
@@ -133,4 +92,4 @@ function CreateDogArrays() {
   );
 }
 
-export default CreateDogArrays;
+export default CreateDogCommands;

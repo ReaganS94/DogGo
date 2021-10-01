@@ -16,11 +16,13 @@
 }
 
 .profilepic-img {
-  display: flex;
+  height: 100%;
+  margin-top: -13px;
+  margin-left: 2px;
 }
 
 .profilepic-img img {
-  width: 20px;
+  width: 25px;
 }
 
 /*DRAGNDROP GALLERY*/
@@ -42,6 +44,24 @@
 
 .dragndrop-img img {
   width: 100px;
+}
+
+/*PROFILEPIC*/
+
+/* .renderprofilepic {
+  display: flex;
+  width: 90%;
+  background-color: rgb(212, 212, 212);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: -3em;
+} */
+
+.renderprofilepic img {
+  border: solid 4px white;
+  max-width: 100px;
+  margin-top: -14%;
 }
 
 /*IMAGELIST*/

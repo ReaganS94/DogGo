@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+/* .profilepic-div {
+  border: solid blue;
+} */
+
 /*------------------------------------FORM----------------------------------------*/
 
 .createdog-form {
@@ -44,6 +48,11 @@
 .createdog-arrays {
   display: flex;
   padding: 1em 4em;
+  border-bottom: solid 2px rgb(231, 231, 231);
+}
+
+.createdog-commands-array {
+  padding-left: 1.8em;
   border-bottom: solid 2px rgb(231, 231, 231);
 }
 

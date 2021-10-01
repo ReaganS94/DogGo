@@ -10,22 +10,22 @@ const Image = ({ image }) => {
   );
 };
 
-const ImageList = ({ images }) => {
+const ProfilePicList = ({ profilepic }) => {
   const renderImage = (image, index) => {
-    return renderImage ? (
-      <div className="renderedimages">
+    return (
+      <div className={"renderprofilepic"}>
         <Image image={image} key={`${image.id}-image`} />
       </div>
-    ) : (
-      ""
     );
   };
 
   return (
     <>
-      <section className="file-list">{images.map(renderImage)}</section>
+      <section className="profilepic-list">
+        {profilepic.map(renderImage)}
+      </section>
     </>
   );
 };
 
-export default ImageList;
+export default ProfilePicList;
