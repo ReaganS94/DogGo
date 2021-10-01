@@ -3,6 +3,8 @@ import Home from "./components/home/Home";
 import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
 import UserProfile from "./components/userPage/UserProfile";
 import Dogprofile from "./components/dogprofile/Dogprofile";
+import SignIn from "./components/signIn&Up/SignIn"
+import SignUp from "./components/signIn&Up/SignUp"
 
 // import axios from "axios";
 // import { useEffect, useState } from "react";
@@ -20,6 +22,7 @@ import "../src/components/dogprofile/Dogprofile.css";
 function App() {
 
   return (
+
     <Router>
       <Switch>
         <Route path="/dogfriendlyplaces">
@@ -39,6 +42,16 @@ function App() {
       <Switch>
         <Route path="/dogprofile/:id">
           <Dogprofile />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/signin">
+          <SignIn />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/signup">
+          <SignUp />
         </Route>
       </Switch>
       <Footer />

@@ -1,8 +1,15 @@
 import doggo_ci_final_6 from "../img/logo/doggo_ci_final_6.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
+
+
+
+
 
 function Navbar() {
+
   return (
+
     <div className="navbar-container">
       <div className="navbar-left">
         <img src={doggo_ci_final_6} className="nav-logo" alt="nav-logo" />
@@ -27,13 +34,12 @@ function Navbar() {
 
       <div className="navbar-right">
         <ul>
-          <NavLink to="/login">
+          <NavLink to="/signin">
             <li className="kollektif nav-login textwhite">login</li>
-          </NavLink>
-
+          </NavLink> 
           <NavLink to="/signup">
-            <li className="kollektif nav-signup textwhite">sign up</li>
-          </NavLink>
+             <li className="kollektif nav-signup textwhite">sign up</li>   
+          </NavLink> 
         </ul>
       </div>
     </div>

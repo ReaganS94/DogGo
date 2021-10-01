@@ -17,7 +17,7 @@ function Dogprofile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/dogs/${id}`)
+      .get(`https://dry-temple-96625.herokuapp.com/dogs/${id}`)
       .then((response) => {
         setDog(response.data.data);
       })
