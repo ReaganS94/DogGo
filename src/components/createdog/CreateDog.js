@@ -59,6 +59,7 @@ function CreateDog(props) {
   const [dogkidfriendly, setDogkidfriendly] = useState();
   const [dogcatfriendly, setDogcatfriendly] = useState();
   const [dogallergies, setDogallergies] = useState();
+  const [dogcastrated, setDogcastrated] = useState();
   const [dogcharacter, setDogcharacter] = useState([]);
   const [dogcommands, setDogcommands] = useState([]);
   const [dogprofilepic, setDogprofilepic] = useState("");
@@ -75,6 +76,7 @@ function CreateDog(props) {
       dogkidfriendly,
       dogcatfriendly,
       dogallergies,
+      dogcastrated,
       dogcharacter,
       dogcommands,
       dogprofilepic,
@@ -98,6 +100,7 @@ function CreateDog(props) {
     setDogallergies();
     setDogcharacter([]);
     setDogcommands([]);
+    setDogprofilepic();
     setDoggallery([]);
   };
 
@@ -128,7 +131,16 @@ function CreateDog(props) {
               setDogage={setDogage}
               setDogabout={setDogabout}
             />
-            <CreateDogBooleans />
+            <CreateDogBooleans
+              dogkidfriendly={dogkidfriendly}
+              dogcatfriendly={dogcatfriendly}
+              dogcastrated={dogcastrated}
+              dogallergies={dogallergies}
+              setDogkidfriendly={setDogkidfriendly}
+              setDogcatfriendly={setDogcatfriendly}
+              setDogcastrated={setDogcastrated}
+              setDogallergies={setDogallergies}
+            />
             <CreateDogArrays />
             <CreateDogCommands />
             <DropZone

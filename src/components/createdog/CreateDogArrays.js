@@ -7,7 +7,30 @@ import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 
-function CreateDogArrays() {
+function CreateDogArrays({
+  calm,
+  setCalm,
+  easygoing,
+  setEasygoing,
+  courageous,
+  setCourageous,
+  territorial,
+  setTerritorial,
+  intelligent,
+  setIntelligent,
+  patient,
+  setPatient,
+  loyal,
+  setLoyal,
+  affectionate,
+  setAffectionate,
+  hyperactive,
+  setHyperactive,
+  anxious,
+  setAnxious,
+  aggressive,
+  setAggressive,
+}) {
   return (
     <div className="createdog-arrays">
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
@@ -17,8 +40,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // // checked={jason}
-                  // onChange={handleChange}
+                  checked={calm}
+                  onChange={() => setCalm(true)}
                   name="calm"
                 />
               }
@@ -27,8 +50,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={easygoing}
+                  onChange={() => setEasygoing(true)}
                   name="easy going"
                 />
               }
@@ -37,8 +60,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={courageous}
+                  onChange={() => setCourageous(true)}
                   name="courageous"
                 />
               }
@@ -47,8 +70,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={territorial}
+                  onChange={() => setTerritorial(true)}
                   name="territorial"
                 />
               }
@@ -57,8 +80,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={intelligent}
+                  onChange={() => setIntelligent(true)}
                   name="intelligent"
                 />
               }
@@ -68,8 +91,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={patient}
+                  onChange={() => setPatient(true)}
                   name="patient"
                 />
               }
@@ -79,8 +102,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={loyal}
+                  onChange={() => setLoyal(true)}
                   name="loyal"
                 />
               }
@@ -89,8 +112,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={affectionate}
+                  onChange={() => setAffectionate(true)}
                   name="affectionate"
                 />
               }
@@ -99,8 +122,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={hyperactive}
+                  onChange={() => setHyperactive(true)}
                   name="hyper active"
                 />
               }
@@ -109,8 +132,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={anxious}
+                  onChange={() => setAnxious(true)}
                   name="anxious"
                 />
               }
@@ -119,8 +142,8 @@ function CreateDogArrays() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // // checked={gilad}
-                  // onChange={handleChange}
+                  checked={aggressive}
+                  onChange={() => setAggressive(true)}
                   name="aggressive"
                 />
               }

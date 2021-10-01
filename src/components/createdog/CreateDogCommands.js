@@ -7,7 +7,22 @@ import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 
-function CreateDogCommands() {
+function CreateDogCommands({
+  sit,
+  setSit,
+  come,
+  setCome,
+  paw,
+  setPaw,
+  stop,
+  setStop,
+  stay,
+  setStay,
+  bring,
+  setBring,
+  down,
+  setDown,
+}) {
   return (
     <div className="createdog-commands-array ">
       <FormControl sx={{ m: 7 }} component="fieldset" variant="standard">
@@ -17,8 +32,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // // checked={jason}
-                  // onChange={handleChange}
+                  checked={sit}
+                  onChange={() => setSit(true)}
                   name="sit"
                 />
               }
@@ -27,8 +42,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={come}
+                  onChange={() => setCome(true)}
                   name="come"
                 />
               }
@@ -37,8 +52,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={paw}
+                  onChange={() => setPaw(true)}
                   name="paw"
                 />
               }
@@ -47,8 +62,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={stop}
+                  onChange={() => setStop(true)}
                   name="stop"
                 />
               }
@@ -57,8 +72,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={stay}
+                  onChange={() => setStay(true)}
                   name="stay"
                 />
               }
@@ -68,8 +83,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={bring}
+                  onChange={() => setBring(true)}
                   name="bring"
                 />
               }
@@ -78,8 +93,8 @@ function CreateDogCommands() {
             <FormControlLabel
               control={
                 <Checkbox
-                  // checked={antoine}
-                  // onChange={handleChange}
+                  checked={down}
+                  onChange={() => setDown(true)}
                   name="down"
                 />
               }
