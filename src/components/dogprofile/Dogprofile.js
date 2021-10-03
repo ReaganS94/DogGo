@@ -12,7 +12,7 @@ import Navbar from "../Navbar";
 function Dogprofile() {
   const { id } = useParams();
   const [dog, setDog] = useState();
-  console.log("test");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -20,8 +20,15 @@ function Dogprofile() {
       .then((response) => {
         setDog(response.data.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .then((res) => {
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
 
   return (
     <>

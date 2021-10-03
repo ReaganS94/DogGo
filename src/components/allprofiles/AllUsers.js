@@ -20,6 +20,7 @@ function AllUsers() {
   };
 
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -27,8 +28,15 @@ function AllUsers() {
       .then((response) => {
         setUsers(response.data.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .then((res) => {
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
 
   return (
     <>
