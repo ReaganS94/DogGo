@@ -17,7 +17,7 @@ function Dogprofile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/dogs/${id}`)
+      .get(`https://dry-temple-96625.herokuapp.com/dogs/${id}`)
       .then((response) => {
         setDog(response.data.data);
       })
@@ -43,7 +43,7 @@ function Dogprofile() {
   const createDog = () => {
     axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios
-      .post(`http://localhost:5000/dogs`, newDog)
+      .post(`https://dry-temple-96625.herokuapp.com/dogs`, newDog)
       .then((response) => {
         setDog(response.data.data);
         console.log(response.data);
