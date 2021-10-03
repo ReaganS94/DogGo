@@ -18,7 +18,7 @@
 
 .userDetailsLeft {
     display: flex; 
-    width: 100%;
+    width: 30%;
     height: 100%;
     flex-direction: column;
     justify-content:center;
@@ -28,8 +28,8 @@
 
 .profilePic {
     width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    height: 300px; 
+    border-radius: 10%;
     margin-top: 1rem; 
     margin-bottom: 1rem;
     margin-left: 3rem;
@@ -60,7 +60,7 @@
 
 .userDetailsMiddle {
     display: flex; 
-    width: 100%;
+    width: 40%;
     height: 100%;
     flex-direction: column;
     justify-content:center;
@@ -68,34 +68,89 @@
     margin: 0 1rem; 
 }
 
-.userDetailsMiddle h6  {
+.userDetailsMiddle h3, 
+.userDetailsMiddle h6 {
   margin-bottom: 0;
 }
+.walkingDog img {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    margin-left: 22rem;
+}
+
+
 
 .userDetailsRight {
     display: flex; 
-    width: 100%;
+    width: 30%;
     height: 100%; 
     flex-direction: column;
     justify-content:center;
     align-items: center;  
+    margin-top: 2.2rem;
+}
+
+.userDetailsRight p{
+  margin-bottom: 0 ;
+}
+
+.openButton { 
+    pointer-events: none;   
+    margin: 0.5rem auto;
+
+}
+
+.closeButton { 
+    pointer-events: none;   
+    margin: 0.5rem auto;
+    opacity: 0.2;
 }
 
 .linkedDogs {
     width: 100%;
-    height: 300px;
+    height: 350px;
     margin: 0 auto; 
+    display:flex; 
+    flex-direction:column;
+    justify-content: center;
+    align-items:center; 
+    background-color: #F4C34D; 
+    padding: 0;
+}
+
+.linkedDogs h4{
+    color:#2E2E2E;
+    margin: 2rem auto 1rem auto;
+}
+
+
+.dogPics {
+    width: 100%;
+    height:auto;
     display:flex; 
     justify-content: center;
     align-items:center; 
-
 }
 
-.linkedDogs img {
-    margin: 10% auto; 
+.dogDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    justify-content: center;
+    align-items:center;  
+}
+
+.dogDetails h6 {
+    margin-top: 1rem;
+    margin-bottom:1rem; 
+}
+
+
+
+.dogDetails img {
     width: 200px;
     height:200px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 

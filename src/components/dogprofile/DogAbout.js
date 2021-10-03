@@ -42,7 +42,7 @@ function DogAbout({ dog }) {
               <img src={dog.user.profilePic} />
 
               <div>
-                <Link to="/userprofile/:id">
+                <Link to={`/userprofile/${dog.user._id}`}>
                   <button className="backtoparent">back to my parent</button>
                 </Link>
               </div>
