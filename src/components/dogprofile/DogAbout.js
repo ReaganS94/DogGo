@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 function DogAbout({ dog }) {
+  // const { id } = useParams();
+
   return (
     <>
       <div className="dogprofile-top">

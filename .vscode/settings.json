@@ -3,7 +3,8 @@
     "Dogfriendlyplaces",
     "backtoparent",
     "geosearch",
-    "latlng"
+    "latlng",
+    "locationfound"
   ],
   "cSpell.words": [
     "buttonblue",
@@ -11,6 +12,7 @@
     "dogprofile",
     "Dogprofile",
     "headerdogprofile",
+    "Moldyr",
     "textwhite"
   ]
 }
