@@ -4,8 +4,11 @@ import Dogfriendlyplaces from "./components/places/Dogfriendlyplaces";
 import UserProfile from "./components/userPage/UserProfile";
 import Dogprofile from "./components/dogprofile/Dogprofile";
 import CreateDog from "./components/createdog/CreateDog";
-import SignIn from "./components/signIn&Up/SignIn"
-import SignUp from "./components/signIn&Up/SignUp"
+import SignIn from "./components/signIn&Up/SignIn";
+import SignUp from "./components/signIn&Up/SignUp";
+import AllDogs from "./components/allprofiles/AllDogs";
+import AllUsers from "./components/allprofiles/AllUsers";
+import Community from "./components/allprofiles/Community";
 
 // import axios from "axios";
 // import { useEffect, useState } from "react";
@@ -22,7 +25,6 @@ import "../src/components/dogprofile/Dogprofile.css";
 
 function App() {
   return (
-
     <Router>
       <Switch>
         <Route path="/dogfriendlyplaces">
@@ -44,12 +46,12 @@ function App() {
           <Dogprofile />
         </Route>
       </Switch>
-       <Switch>
+      <Switch>
         <Route path="/createdog">
           <CreateDog />
         </Route>
-       </Switch>
-       <Switch>
+      </Switch>
+      <Switch>
         <Route path="/signin">
           <SignIn />
         </Route>
@@ -57,6 +59,21 @@ function App() {
       <Switch>
         <Route path="/signup">
           <SignUp />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/alldogs">
+          <AllDogs />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/allusers">
+          <AllUsers />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/community">
+          <Community />
         </Route>
       </Switch>
       <Footer />

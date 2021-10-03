@@ -21,7 +21,7 @@ function DogGallery({ dog }) {
     <div className="doggallery">
       <h2 className="textwhite">my gallery</h2>
       <img className="pawprint-gallery" src={paw} />
-      <ImageList className="dog-gallery-box" cols={4}>
+      <ImageList className="dog-gallery-box" cols={4} alignContent="flex-start">
         {dog.galleryPhotos.map((item) => (
           <ImageListItem className="doggalleryphoto" key={item.img}>
             <img

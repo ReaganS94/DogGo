@@ -56,59 +56,125 @@ function CreateDog(props) {
   const [dogsize, setDogsize] = useState();
   const [dogage, setDogage] = useState();
   const [dogabout, setDogabout] = useState("");
+
   const [dogkidfriendly, setDogkidfriendly] = useState();
   const [dogcatfriendly, setDogcatfriendly] = useState();
   const [dogallergies, setDogallergies] = useState();
   const [dogcastrated, setDogcastrated] = useState();
-  const [dogcharacter, setDogcharacter] = useState([]);
-  const [dogcommands, setDogcommands] = useState([]);
+  // const [dogcharacter, setDogcharacter] = useState([]);
+  // const [dogcommands, setDogcommands] = useState([]);
   const [dogprofilepic, setDogprofilepic] = useState("");
   const [doggallery, setDoggallery] = useState([]);
+
+  const [calm, setCalm] = useState();
+  const [easygoing, setEasygoing] = useState();
+  const [courageous, setCourageous] = useState();
+  const [territorial, setTerritorial] = useState();
+  const [intelligent, setIntelligent] = useState();
+  const [patient, setPatient] = useState();
+  const [loyal, setLoyal] = useState();
+  const [affectionate, setAffectionate] = useState();
+  const [hyperactive, setHyperactive] = useState();
+  const [anxious, setAnxious] = useState();
+  const [aggressive, setAggressive] = useState();
+
+  const [sit, setSit] = useState();
+  const [come, setCome] = useState();
+  const [paw, setPaw] = useState();
+  const [stop, setStop] = useState();
+  const [stay, setStay] = useState();
+  const [bring, setBring] = useState();
+  const [down, setDown] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newDoggo = {
-      dogname,
-      dogbreed,
-      dogsize,
-      dogage,
-      dogabout,
-      dogkidfriendly,
-      dogcatfriendly,
-      dogallergies,
-      dogcastrated,
-      dogcharacter,
-      dogcommands,
-      dogprofilepic,
+      name: dogname,
+      breed: dogbreed,
+      size: dogsize,
+      age: dogage,
+      about: dogabout,
+      kidFriendly: dogkidfriendly,
+      catFriendly: dogcatfriendly,
+      allergies: dogallergies,
+      castrated: dogcastrated,
+      // dogcharacter,
+      // dogcommands,
+      profilePic: dogprofilepic,
       doggallery,
+
+      calm,
+      easygoing,
+      courageous,
+      territorial,
+      intelligent,
+      patient,
+      loyal,
+      affectionate,
+      hyperactive,
+      anxious,
+      aggressive,
+
+      sit,
+      come,
+      paw,
+      stop,
+      stay,
+      bring,
+      down,
+    };
+
+    const cleanInput = (e) => {
+      setDogname("");
+      setDogbreed("");
+      setDogage("");
+      setDogsize("");
+      setDogabout("");
+      setDogprofilepic();
+
+      setDogkidfriendly();
+      setDogcatfriendly();
+      setDogallergies();
+      setDogcastrated();
+
+      setCalm();
+      setEasygoing();
+      setCourageous();
+      setTerritorial();
+      setIntelligent();
+      setPatient();
+      setLoyal();
+      setAffectionate();
+      setHyperactive();
+      setAnxious();
+      setAggressive();
+
+      setDogprofilepic();
+      setDoggallery([]);
+
+      setSit();
+      setCome();
+      setPaw();
+      setStop();
+      setStay();
+      setBring();
+      setDown();
     };
 
     axios
-      .post("https://dry-temple-96625.herokuapp.com/dogs/", newDoggo)
+      .post("https://dry-temple-96625.herokuapp.com/dogs", newDoggo)
       .then((res) => {
         console.log(res);
         alert("Your dog has been added.");
+        cleanInput();
       });
-
-    setDogname("");
-    setDogbreed("");
-    setDogsize();
-    setDogage();
-    setDogabout("");
-    setDogkidfriendly();
-    setDogcatfriendly();
-    setDogallergies();
-    setDogcharacter([]);
-    setDogcommands([]);
-    setDogprofilepic();
-    setDoggallery([]);
   };
 
   return (
     <>
       <CreateDogTop />
       <div className="createdog-container">
-        <div className="createdog-form">
+        <div className="createdog-form" id="myForm">
           <Box
             component="form"
             sx={{
@@ -118,7 +184,6 @@ function CreateDog(props) {
             autoComplete="off"
           >
             <CreateDogPic onDrop={onDropProfilePic} profilepic={profilepic} />
-
             <CreateDogTextfields
               dogname={dogname}
               dogbreed={dogbreed}
@@ -141,8 +206,49 @@ function CreateDog(props) {
               setDogcastrated={setDogcastrated}
               setDogallergies={setDogallergies}
             />
-            <CreateDogArrays />
-            <CreateDogCommands />
+            <CreateDogArrays
+              calm={calm}
+              setCalm={setCalm}
+              easygoing={easygoing}
+              setEasygoing={setEasygoing}
+              courageous={courageous}
+              setCourageous={setCourageous}
+              territorial={territorial}
+              setTerritorial={setTerritorial}
+              intelligent={intelligent}
+              setIntelligent={setIntelligent}
+              patient={patient}
+              setPatient={setPatient}
+              loyal={loyal}
+              setLoyal={setLoyal}
+              affectionate={affectionate}
+              setAffectionate={setAffectionate}
+              hyperactive={hyperactive}
+              setHyperactive={setHyperactive}
+              anxious={anxious}
+              setAnxious={setAnxious}
+              aggressive={aggressive}
+              setAggressive={setAggressive}
+              territorial={territorial}
+              setTerritorial={setTerritorial}
+            />
+            <CreateDogCommands
+              sit={sit}
+              setSit={setSit}
+              come={come}
+              setCome={setCome}
+              paw={paw}
+              setPaw={setPaw}
+              stop={stop}
+              setStop={setStop}
+              stay={stay}
+              setStay={setStay}
+              bring={bring}
+              setBring={setBring}
+              down={down}
+              setDown={setDown}
+            />
+
             <DropZone
               onDrop={onDropImage}
               accept={"image/*"}
@@ -162,7 +268,7 @@ function CreateDog(props) {
             className="submitbutton"
             value="save"
             type="submit"
-            // onClick={}
+            onClick={handleSubmit}
           ></input>
         </div>
       </div>

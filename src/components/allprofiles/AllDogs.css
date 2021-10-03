@@ -1,0 +1,70 @@
+.header-alldogs {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  /* position: absolute;
+    top: 0px;
+    left: 0px; */
+  background-image: url("../../img/headerphotos/27.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headline-alldogs {
+  display: flex;
+  justify-content: center;
+}
+
+.imagelist-alldogs {
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+.alldogs-profilepic {
+  width: 200px;
+}
+
+.backtoparent {
+  margin-top: 1em;
+}
+
+.MuiImageListItemBar-root {
+  height: 50px;
+}
+
+.MuiImageListItemBar-titleWrap {
+  background-color: #f4c34d;
+}
+
+.MuiImageListItemBar-title {
+  padding-left: 1em;
+  font-family: Kollektif;
+  font-size: 3em;
+}
+
+.MuiImageListItemBar-subtitle {
+  padding-left: 1.2em;
+}
+
+.MuiImageListItemBar-actionIcon {
+  display: flex;
+  align-items: center;
+  background-color: #f4c34d;
+  padding-right: 1em;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonbacktop {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+/* 
+Blue (primary): #3699E2
+Yellow: #F4C34D
+Red: #DC3C4D 
+Offwhite: #F8FBFD*/

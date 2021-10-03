@@ -41,7 +41,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={calm}
-                  onChange={() => setCalm(true)}
+                  onClick={(e) => setCalm(e.target.value)}
                   name="calm"
                 />
               }
@@ -51,7 +51,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={easygoing}
-                  onChange={() => setEasygoing(true)}
+                  onClick={(e) => setEasygoing(e.target.value)}
                   name="easy going"
                 />
               }
@@ -61,7 +61,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={courageous}
-                  onChange={() => setCourageous(true)}
+                  onClick={(e) => setCourageous(e.target.value)}
                   name="courageous"
                 />
               }
@@ -71,7 +71,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={territorial}
-                  onChange={() => setTerritorial(true)}
+                  onChange={(e) => setTerritorial(e.target.value)}
                   name="territorial"
                 />
               }
@@ -81,7 +81,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={intelligent}
-                  onChange={() => setIntelligent(true)}
+                  onChange={(e) => setIntelligent(e.target.value)}
                   name="intelligent"
                 />
               }
@@ -92,7 +92,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={patient}
-                  onChange={() => setPatient(true)}
+                  onChange={(e) => setPatient(e.target.value)}
                   name="patient"
                 />
               }
@@ -103,7 +103,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={loyal}
-                  onChange={() => setLoyal(true)}
+                  onChange={(e) => setLoyal(e.target.value)}
                   name="loyal"
                 />
               }
@@ -113,7 +113,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={affectionate}
-                  onChange={() => setAffectionate(true)}
+                  onChange={(e) => setAffectionate(e.target.value)}
                   name="affectionate"
                 />
               }
@@ -123,7 +123,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={hyperactive}
-                  onChange={() => setHyperactive(true)}
+                  onChange={(e) => setHyperactive(e.target.value)}
                   name="hyper active"
                 />
               }
@@ -133,7 +133,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={anxious}
-                  onChange={() => setAnxious(true)}
+                  onChange={(e) => setAnxious(e.target.value)}
                   name="anxious"
                 />
               }
@@ -143,7 +143,7 @@ function CreateDogArrays({
               control={
                 <Checkbox
                   checked={aggressive}
-                  onChange={() => setAggressive(true)}
+                  onChange={(e) => setAggressive(e.target.value)}
                   name="aggressive"
                 />
               }
