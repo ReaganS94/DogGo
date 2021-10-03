@@ -5,6 +5,7 @@ function Community() {
   return (
     <div>
       <AllUsers />
+      <AllDogs />
     </div>
   );
 }

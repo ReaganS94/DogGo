@@ -32,9 +32,9 @@ function AllDogs() {
 
   return (
     <>
-      <div className="header-alldogs">
+      {/* <div className="header-alldogs">
         <Navbar />
-      </div>
+      </div> */}
       <div className="headline-alldogs">
         <h2 className="textred ">all doggos in your area</h2>
       </div>
