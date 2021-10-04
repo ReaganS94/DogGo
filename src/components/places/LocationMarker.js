@@ -9,7 +9,7 @@ function LocationMarker({ setShouldFetch }) {
 
   const [position, setPosition] = useState(null);
   const [markers, setMarkers] = useState([]);
-  const [newLocation, setNewLocation] = useState(null);
+  // const [newLocation, setNewLocation] = useState(null);
 
   const [name, setName] = useState("");
   const [website, setWebsite] = useState("");
@@ -57,45 +57,52 @@ function LocationMarker({ setShouldFetch }) {
     });
   }, [map]);
 
-  useEffect(() => {
-    axios
-      .get(`https://dry-temple-96625.herokuapp.com/locations`)
-      .then((response) => {
-        setNewLocation(response.data);
-        setShouldFetch(false);
-      })
-      .catch((err) => console.error(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://dry-temple-96625.herokuapp.com/locations`)
+  //     .then((response) => {
+  //       setNewLocation(response.data);
+  //       setShouldFetch(false);
+  //     })
+  //     .catch((err) => console.error(err));
+  // }, []);
+
+  const addNewLocation = {
+    name: name,
+    website: website,
+    phone: "Tel: " + phone,
+    address: address,
+    LatLng: {
+      lat: lat,
+      lng: lng,
+    },
+    type: type,
+  };
+
+  function refreshPage() {
+    window.location.reload();
+  }
 
   function submit(e) {
     e.preventDefault();
     console.log({
       name: name,
       website: website,
-      phone: ("Tel: ", phone),
+      phone: "Tel: " + phone,
       address: address,
-      lat: lat,
-      lng: lng,
+      LatLng: {
+        lat: lat,
+        lng: lng,
+      },
       type: type,
     });
     axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios
-      .post(`https://dry-temple-96625.herokuapp.com/locations`, {
-        name: name,
-        website: website,
-        phone: ("Tel: ", phone),
-        address: address,
-        LatLng: {
-          lat: lat,
-          lng: lng,
-        },
-        type: type,
-      })
-      .then((res) => {
-        console.log(res.data);
-      });
+      .post(`https://dry-temple-96625.herokuapp.com/locations`, addNewLocation)
+      .then(alert("Location Successfully Saved"))
+      .then(refreshPage);
   }
-  // console.log(data);
+
   return position === null ? null : (
     <>
       <Marker position={position}>
@@ -106,8 +113,6 @@ function LocationMarker({ setShouldFetch }) {
           <Marker position={marker} key={marker.lat + marker.lng}>
             <Popup>
               {marker.Address}, {marker.Postal}, {marker.City}
-              {/* Marker is at {[markers[0].lat, " - ", markers[0].lng]} */}
-              {/* <button onClick={handleShow}>Add Info</button> */}
               <form onSubmit={(e) => submit(e)}>
                 <input
                   onChange={(e) => setName(e.target.value)}
@@ -130,7 +135,7 @@ function LocationMarker({ setShouldFetch }) {
                   value={phone}
                   id="phone"
                 ></input>
-
+                <br />
                 <input
                   onChange={(e) => setType(e.target.value)}
                   type="radio"
@@ -163,7 +168,7 @@ function LocationMarker({ setShouldFetch }) {
                   name="type"
                 ></input>
                 <label htmlFor="park">Park</label>
-
+                <br />
                 <button>Submit</button>
               </form>
             </Popup>
