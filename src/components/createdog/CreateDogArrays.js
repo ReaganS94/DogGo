@@ -1,22 +1,33 @@
 import "./CreateDog.css";
 
-import axios from "axios";
-import { useCallback, useState, useEffect } from "react";
-
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import Checkbox from "@mui/material/Checkbox";
 
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 function CreateDogArrays({ character, setCharacter }) {
   const [characterOptions, setCharacterOptions] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get("https://dry-temple-96625.herokuapp.com/characters")
-      .then((res) => setCharacterOptions(res.data.data));
+      .get(`https://dry-temple-96625.herokuapp.com/characters/`)
+      .then((res) => {
+        setCharacterOptions(res.data.data);
+      })
+      .catch((err) => console.log(err))
+      .then((res) => {
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
 
   const onChange = (e) => {
     const { value } = e.target;

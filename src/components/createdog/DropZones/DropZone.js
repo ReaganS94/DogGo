@@ -20,24 +20,29 @@ function DropZone({
   });
 
   return (
-    <div className={className} {...getRootProps()}>
-      <input {...getInputProps()} />
-      {isDragActive ? (
-        <>
-          <p>{textactive}</p>
-          <div className={classNameImg}>
-            <img src={uploadactive} />
-          </div>
-        </>
-      ) : (
-        <>
-          <p>{textdefault}</p>
-          <div className={classNameImg}>
-            <img src={upload} />
-          </div>
-        </>
-      )}
-    </div>
+    <>
+      <div className="addgallerytext">
+        <p className="p1">add some photos for your dog's gallery here</p>
+      </div>
+      <div className={className} {...getRootProps()}>
+        <input {...getInputProps()} />
+        {isDragActive ? (
+          <>
+            <p>{textactive}</p>
+            <div className={classNameImg}>
+              <img src={uploadactive} />
+            </div>
+          </>
+        ) : (
+          <>
+            <p>{textdefault}</p>
+            <div className={classNameImg}>
+              <img src={upload} />
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 }
 

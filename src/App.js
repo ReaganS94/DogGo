@@ -9,6 +9,7 @@ import SignUp from "./components/signIn&Up/SignUp";
 import AllDogs from "./components/allprofiles/AllDogs";
 import AllUsers from "./components/allprofiles/AllUsers";
 import Community from "./components/allprofiles/Community";
+import ScrollTop from "./ScrollTop";
 
 // import axios from "axios";
 // import { useEffect, useState } from "react";
@@ -26,6 +27,7 @@ import "../src/components/dogprofile/Dogprofile.css";
 function App() {
   return (
     <Router>
+      <ScrollTop />
       <Switch>
         <Route path="/dogfriendlyplaces">
           <Dogfriendlyplaces />

@@ -7,7 +7,7 @@ function CreateDogPic({ onDrop, profilepic }) {
   return (
     <div className="profilepic-div">
       <div>
-        <p className="p2 addprofilepic">add your dogs profile picture here</p>
+        <p className="p1 addprofilepic">add your dogs profile picture here</p>
       </div>
       <DropZoneProfile
         onDrop={onDrop}

@@ -22,7 +22,7 @@ const ProfilePicList = ({ profilepic }) => {
   return (
     <>
       <section className="profilepic-list">
-        {profilepic.map(renderImage)}
+        {profilepic && profilepic.map(renderImage)}
       </section>
     </>
   );
