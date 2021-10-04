@@ -15,9 +15,10 @@ import Box from "@mui/material/Box";
 import cuid from "cuid";
 import axios from "axios";
 
-function CreateDog(props) {
+function CreateDog() {
   const [images, setImages] = useState([]);
   const [profilepic, setProfilePic] = useState([]);
+  const [character, setCharacter] = useState([]);
   //acceptedFiles is an array of File values. You can read the file or send it to the server and upload.
   //Whatever process you want to do, you can do it there
 
@@ -66,18 +67,6 @@ function CreateDog(props) {
   const [dogprofilepic, setDogprofilepic] = useState("");
   const [doggallery, setDoggallery] = useState([]);
 
-  const [calm, setCalm] = useState();
-  const [easygoing, setEasygoing] = useState();
-  const [courageous, setCourageous] = useState();
-  const [territorial, setTerritorial] = useState();
-  const [intelligent, setIntelligent] = useState();
-  const [patient, setPatient] = useState();
-  const [loyal, setLoyal] = useState();
-  const [affectionate, setAffectionate] = useState();
-  const [hyperactive, setHyperactive] = useState();
-  const [anxious, setAnxious] = useState();
-  const [aggressive, setAggressive] = useState();
-
   const [sit, setSit] = useState();
   const [come, setCome] = useState();
   const [paw, setPaw] = useState();
@@ -103,18 +92,6 @@ function CreateDog(props) {
       profilePic: dogprofilepic,
       doggallery,
 
-      calm,
-      easygoing,
-      courageous,
-      territorial,
-      intelligent,
-      patient,
-      loyal,
-      affectionate,
-      hyperactive,
-      anxious,
-      aggressive,
-
       sit,
       come,
       paw,
@@ -136,18 +113,6 @@ function CreateDog(props) {
       setDogcatfriendly();
       setDogallergies();
       setDogcastrated();
-
-      setCalm();
-      setEasygoing();
-      setCourageous();
-      setTerritorial();
-      setIntelligent();
-      setPatient();
-      setLoyal();
-      setAffectionate();
-      setHyperactive();
-      setAnxious();
-      setAggressive();
 
       setDogprofilepic();
       setDoggallery([]);
@@ -206,32 +171,7 @@ function CreateDog(props) {
               setDogcastrated={setDogcastrated}
               setDogallergies={setDogallergies}
             />
-            <CreateDogArrays
-              calm={calm}
-              setCalm={setCalm}
-              easygoing={easygoing}
-              setEasygoing={setEasygoing}
-              courageous={courageous}
-              setCourageous={setCourageous}
-              territorial={territorial}
-              setTerritorial={setTerritorial}
-              intelligent={intelligent}
-              setIntelligent={setIntelligent}
-              patient={patient}
-              setPatient={setPatient}
-              loyal={loyal}
-              setLoyal={setLoyal}
-              affectionate={affectionate}
-              setAffectionate={setAffectionate}
-              hyperactive={hyperactive}
-              setHyperactive={setHyperactive}
-              anxious={anxious}
-              setAnxious={setAnxious}
-              aggressive={aggressive}
-              setAggressive={setAggressive}
-              territorial={territorial}
-              setTerritorial={setTerritorial}
-            />
+            <CreateDogArrays character={character} setCharacter={setCharacter} />
             <CreateDogCommands
               sit={sit}
               setSit={setSit}

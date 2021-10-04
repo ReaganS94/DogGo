@@ -20,6 +20,7 @@ function AllDogs() {
   };
 
   const [dogs, setDogs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -27,8 +28,15 @@ function AllDogs() {
       .then((response) => {
         setDogs(response.data.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .then((res) => {
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
 
   return (
     <>

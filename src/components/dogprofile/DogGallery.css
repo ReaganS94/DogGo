@@ -19,20 +19,6 @@
   margin-top: -4%;
 }
 
-.doggalleryphoto {
-  cursor: pointer;
-}
-
-.doggalleryphoto:hover {
-  cursor: pointer;
-  scale: 1.5;
-}
-
-/* .MuiImageListItem-img {
-  width: auto;
-  height: auto;
-} */
-
 .buttonbacktop {
   font-size: 1em;
   margin-bottom: 2em;
