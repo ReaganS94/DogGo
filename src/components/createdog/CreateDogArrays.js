@@ -18,7 +18,17 @@ function CreateDogArrays({ character, setCharacter }) {
       .then((res) => setCharacterOptions(res.data.data));
   }, []);
 
-  console.log(characterOptions);
+  const onChange = (e) => {
+    const { value } = e.target;
+    const newCharacter = character.some((char) => char === value)
+      ? character.filter((char) => char !== value)
+      : [...character, value];
+
+    setCharacter(newCharacter);
+  };
+
+  console.log(character);
+
   return (
     <div className="createdog-arrays">
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
@@ -30,7 +40,7 @@ function CreateDogArrays({ character, setCharacter }) {
                 control={
                   <Checkbox
                     value={char._id}
-                    onChange={(e) => console.log(e.target.value)}
+                    onChange={onChange}
                     name="character"
                   />
                 }

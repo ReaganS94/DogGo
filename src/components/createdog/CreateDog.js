@@ -91,7 +91,7 @@ function CreateDog() {
       // dogcommands,
       profilePic: dogprofilepic,
       doggallery,
-
+      character,
       sit,
       come,
       paw,
@@ -116,6 +116,9 @@ function CreateDog() {
 
       setDogprofilepic();
       setDoggallery([]);
+
+      setCharacter([]);
+      setImages([]);
 
       setSit();
       setCome();
@@ -171,7 +174,10 @@ function CreateDog() {
               setDogcastrated={setDogcastrated}
               setDogallergies={setDogallergies}
             />
-            <CreateDogArrays character={character} setCharacter={setCharacter} />
+            <CreateDogArrays
+              character={character}
+              setCharacter={setCharacter}
+            />
             <CreateDogCommands
               sit={sit}
               setSit={setSit}
