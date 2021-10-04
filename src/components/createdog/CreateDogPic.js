@@ -6,6 +6,9 @@ import DropZoneProfile from "../createdog/DropZones/DropZoneProfile";
 function CreateDogPic({ onDrop, profilepic }) {
   return (
     <div className="profilepic-div">
+      <div>
+        <p className="p2 addprofilepic">add your dogs profile picture here</p>
+      </div>
       <DropZoneProfile
         onDrop={onDrop}
         accept={"image/*"}

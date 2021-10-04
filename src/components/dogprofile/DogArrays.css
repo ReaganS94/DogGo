@@ -32,7 +32,7 @@
 .arraybuttons {
   font-size: 1em;
   text-transform: lowercase;
-  margin-right: 1em;
+  margin: 0.5em;
   width: 16%;
 }
 

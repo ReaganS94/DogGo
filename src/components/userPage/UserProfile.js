@@ -6,6 +6,8 @@ import HeaderUserProfile from "./HeaderUserProfile";
 import ConnectedDogs from "./ConnectedDogs";
 import UserDetails from "./UserDetails";
 
+import { Link } from "react-router-dom";
+
 import walkingDog from "./9.svg";
 
 function UserProfile() {
@@ -37,6 +39,9 @@ function UserProfile() {
       <ConnectedDogs dog={user.dog} />
 
       {console.log(user.dog)}
+      <Link to="/createdog">
+        <button className="adddoggobutton">add new dog</button>
+      </Link>
     </div>
   );
 }

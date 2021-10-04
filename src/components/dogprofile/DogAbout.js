@@ -15,7 +15,7 @@ function DogAbout({ dog }) {
           <div className="nameandfacts">
             <div className="dogname">
               <div>
-                <h2>hi, I am {dog.name}</h2>
+                <h2>hi, I'm {dog.name}</h2>
               </div>
             </div>
             <div className="dogkeyfacts">

@@ -6,7 +6,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
 import FormControl from "@mui/material/FormControl";
 
-function CreateDogBooleans() {
+function CreateDogBooleans({
+  dogkidfriendly,
+  setDogkidfriendly,
+  dogcatfriendly,
+  setDogcatfriendly,
+  dogcastrated,
+  setDogcastrated,
+  dogallergies,
+  setDogallergies,
+}) {
   return (
     <div className="createdog-booleans">
       <FormControl component="fieldset">
@@ -18,11 +27,19 @@ function CreateDogBooleans() {
             name="row-radio-buttons-group"
           >
             <FormControlLabel
-              value="yes"
-              control={<Radio required={true} />}
+              control={<Radio />}
               label="yes"
+              value={true}
+              checked={dogkidfriendly === true}
+              onClick={() => setDogkidfriendly(true)}
             />
-            <FormControlLabel value="no" control={<Radio />} label="no" />
+            <FormControlLabel
+              control={<Radio />}
+              label="no"
+              value={false}
+              checked={dogkidfriendly === false}
+              onClick={() => setDogkidfriendly(false)}
+            />
           </RadioGroup>
         </div>
       </FormControl>
@@ -36,11 +53,19 @@ function CreateDogBooleans() {
             name="row-radio-buttons-group"
           >
             <FormControlLabel
-              value="yes"
-              control={<Radio required={true} />}
+              control={<Radio />}
               label="yes"
+              value={true}
+              checked={dogcatfriendly === true}
+              onClick={() => setDogcatfriendly(true)}
             />
-            <FormControlLabel value="no" control={<Radio />} label="no" />
+            <FormControlLabel
+              control={<Radio />}
+              label="no"
+              value={false}
+              checked={dogcatfriendly === false}
+              onClick={() => setDogcatfriendly(false)}
+            />
           </RadioGroup>
         </div>
       </FormControl>
@@ -50,11 +75,19 @@ function CreateDogBooleans() {
           <FormLabel component="legend">castrated</FormLabel>
           <RadioGroup row aria-label="castrated" name="row-radio-buttons-group">
             <FormControlLabel
-              value="yes"
-              control={<Radio required={true} />}
+              control={<Radio />}
               label="yes"
+              value={true}
+              checked={dogcastrated === true}
+              onClick={() => setDogcastrated(true)}
             />
-            <FormControlLabel value="no" control={<Radio />} label="no" />
+            <FormControlLabel
+              control={<Radio />}
+              label="no"
+              value={false}
+              checked={dogcastrated === false}
+              onClick={() => setDogcastrated(false)}
+            />
           </RadioGroup>
         </div>
       </FormControl>
@@ -63,11 +96,19 @@ function CreateDogBooleans() {
           <FormLabel component="legend">allergies</FormLabel>
           <RadioGroup row aria-label="allergies" name="row-radio-buttons-group">
             <FormControlLabel
-              value="yes"
-              control={<Radio required={true} />}
+              control={<Radio />}
               label="yes"
+              value={true}
+              checked={dogallergies === true}
+              onClick={() => setDogallergies(true)}
             />
-            <FormControlLabel value="no" control={<Radio />} label="no" />
+            <FormControlLabel
+              control={<Radio />}
+              label="no"
+              value={false}
+              checked={dogallergies === false}
+              onClick={() => setDogallergies(false)}
+            />
           </RadioGroup>
         </div>
       </FormControl>

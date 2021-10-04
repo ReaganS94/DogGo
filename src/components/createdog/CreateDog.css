@@ -18,9 +18,17 @@
   align-items: center;
 }
 
-/* .profilepic-div {
-  border: solid blue;
-} */
+.profilepic-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: 70px;
+}
+
+.addprofilepic {
+  margin-top: 25px;
+  margin-left: 1em;
+}
 
 /*------------------------------------FORM----------------------------------------*/
 
