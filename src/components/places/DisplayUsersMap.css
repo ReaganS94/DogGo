@@ -1,0 +1,28 @@
+.dogsittingplacesheader {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-image: url("../../img/headerphotos/30.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  filter: saturate(1);
+}
+
+.mapdogsitting {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.dogsittingmapcontainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.dogsittingheadline {
+  text-align: center;
+}
+
+.userpopupimg {
+}

@@ -4,7 +4,9 @@ import LocationMarker from "./LocationMarker";
 import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
-import PlacesHeader from "./PlacesHeader";
+import DogsittingHeader from "./DogsittingHeader";
+
+import "./DisplayUsersMap.css";
 
 function DisplayUsersMap() {
   const [userLocation, setUserLocation] = useState([]);
@@ -21,41 +23,47 @@ function DisplayUsersMap() {
   console.log(userLocation);
   return (
     <div>
-      <PlacesHeader />
-      <div className="leaflet-container">
-        <MapContainer
-          center={[52.52, 13.405]}
-          zoom={12}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {userLocation &&
-            userLocation.map((users) => (
-              <Marker
-                key={users._id}
-                position={[users.LatLng.lat, users.LatLng.lng]}
-                riseOnHover={true}
-              >
-                <Popup>
-                  <img
-                    src={users.profilePic}
-                    width="180px"
-                    height="200px"
-                    alt={users.username}
-                  />{" "}
-                  <br />
-                  {users.username} <br />
-                  {users.email} <br />
-                  <br />
-                  {users.about}
-                </Popup>
-              </Marker>
-            ))}
-          <Search />
-        </MapContainer>
+      <DogsittingHeader />
+      <div className="dogsittingheadline">
+        <h3 className="textred">find doggo sitters in your area</h3>
+      </div>
+      <div className="dogsittingmapcontainer">
+        <div className="leaflet-container mapdogsitting">
+          <MapContainer
+            center={[52.52, 13.405]}
+            zoom={12}
+            scrollWheelZoom={false}
+          >
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {userLocation &&
+              userLocation.map((users) => (
+                <Marker
+                  key={users._id}
+                  position={[users.LatLng.lat, users.LatLng.lng]}
+                  riseOnHover={true}
+                >
+                  <Popup>
+                    <img
+                    className="userpopupimg"
+                      src={users.profilePic}
+                      width="180px"
+                      height="200px"
+                      alt={users.username}
+                    />{" "}
+                    <br />
+                    {users.username} <br />
+                    {users.email} <br />
+                    <br />
+                    {users.about}
+                  </Popup>
+                </Marker>
+              ))}
+            <Search />
+          </MapContainer>
+        </div>
       </div>
     </div>
   );
