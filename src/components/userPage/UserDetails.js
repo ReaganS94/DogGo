@@ -1,27 +1,39 @@
 import React, {useState} from 'react'
 import ToggleButton from './ToggleButton'
+import axios from 'axios'
+import { useParams } from "react-router-dom";
 
 import {MdLocationCity, MdPanoramaWideAngle} from 'react-icons/md';
 import {AiOutlineMail} from 'react-icons/ai'
 import {AiOutlineFieldNumber} from 'react-icons/ai'
 
 import walkingDog from './9.svg'
-
-
+import { SignalCellularNullRounded } from '@material-ui/icons';
 
 
 function UserDetails({user}) {
-  const [toggled, setToggled] = useState(false); 
-    
-
- let openToDogSit = user.tags.map((tag) => (<button className="openButton">{tag.tag}</button>));
- let notOpenToDogSit = user.tags.map((tag) => <button className="closeButton">{tag.tag}</button>);
+  const [availability, setAvailability] = useState(user.availability); 
+  const { id } = useParams();
 
 
+const onChange = (event) => {
 
-    const onChange = (event) => {
-        setToggled(event.target.checked)
-    }
+    event.preventDefault();
+
+    const updateUser = {
+        availability: !availability
+    }; 
+
+    axios
+    .put(`https://dry-temple-96625.herokuapp.com/users/${id}`, updateUser)
+    .then((res) => {
+        setAvailability(!availability);
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+} 
     
     return (
         <div className="userDetails">
@@ -54,8 +66,8 @@ function UserDetails({user}) {
 
             <div className="userDetailsRight">
             <p>Open to take care of your buddy</p>
-            <ToggleButton onChange={onChange}/>
-             {toggled ? openToDogSit : notOpenToDogSit}
+            <ToggleButton onChange={onChange} value={availability}/>
+               {user.tags.map((tag => <button className={availability ? "openButton" : "closeButton"}>{tag.tag}</button>))}
             </div>
         </div>
     )
