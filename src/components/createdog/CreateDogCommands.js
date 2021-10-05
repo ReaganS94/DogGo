@@ -54,11 +54,6 @@ function CreateDogCommands({ command, setCommand }) {
         <FormGroup>
           <div className="createdog-commands">
             {commandOptions.map((com) => (
-              // <div className="createdog-commands-boxes">
-              //   <Checkbox value={com._id} onChange={onChange} name="command" />
-
-              //   {com.name}
-              // </div>
               <FormControlLabel
                 key={com._id}
                 control={

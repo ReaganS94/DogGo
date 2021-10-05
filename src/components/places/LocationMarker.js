@@ -7,8 +7,6 @@ function LocationMarker({ loadLocations, setAddLocation, setHide }) {
   const GEOCODE_URL =
     "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&langCode=EN&location=";
 
-  const leafletRef = useRef();
-
   const [position, setPosition] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [isCreating, setIsCreating] = useState(false);
@@ -78,7 +76,6 @@ function LocationMarker({ loadLocations, setAddLocation, setHide }) {
   function submit(e) {
     e.preventDefault();
 
-    //axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios
       .post(
         `https://dry-temple-96625.herokuapp.com/locations`,

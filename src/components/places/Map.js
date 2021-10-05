@@ -57,10 +57,6 @@ function Map() {
     setHide(false);
   }
 
-  // const handleBarClick = () => {
-  //   setLocationFilter(placeType.bar);
-  // };
-
   return (
     <div className="container">
       <List

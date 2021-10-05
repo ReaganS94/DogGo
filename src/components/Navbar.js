@@ -1,4 +1,3 @@
-import doggoLogo from "../img/logo/doggoLogo.png";
 import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
