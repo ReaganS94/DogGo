@@ -25,4 +25,26 @@
 }
 
 .userpopupimg {
+  object-fit: cover;
+}
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 1530px) {
+  .dogsittingplacesheader {
+    /* height: 600px; */
+    background-position: 0 45%;
+  }
+}
+
+@media (min-width: 1960px) {
+  .dogsittingplacesheader {
+    height: 600px;
+  }
+}
+
+@media (min-width: 2300px) {
+  .dogsittingplacesheader {
+    height: 700px;
+  }
 }
