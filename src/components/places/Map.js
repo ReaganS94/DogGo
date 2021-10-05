@@ -5,6 +5,21 @@ import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
 
+
+
+// material UI elements
+
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import LocalBarIcon from '@mui/icons-material/LocalBar';
+import LocalCafeIcon from '@mui/icons-material/LocalCafe';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import ParkIcon from '@mui/icons-material/Park';
+import ListItemText from '@mui/material/ListItemText';
+
+
 function Map() {
   const [allLocations, setAllLocations] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(true);
@@ -41,7 +56,19 @@ function Map() {
 
   return (
     <div className="container">
-      <div className="locations">
+     <List 
+        style={{
+        width: '100%',
+        maxWidth: 360,
+        }}
+       >
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar style={{backgroundColor:"#DC3C4D" }}>
+            <LocalBarIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText>
         <label htmlFor="bar">Bar</label>
         <input
           onChange={(e) => setLocationFilter(e.target.value)}
@@ -51,7 +78,16 @@ function Map() {
           id="typeBar"
           checked={locationFilter === placeType.bar}
         ></input>
-        <br />
+        </ListItemText>
+        </ListItem>
+     
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar style={{backgroundColor:"#DC3C4D" }}>
+            <LocalCafeIcon  />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText>
         <label htmlFor="cafe">Cafe</label>
         <input
           onChange={(e) => setLocationFilter(e.target.value)}
@@ -61,7 +97,16 @@ function Map() {
           id="typeCafe"
           checked={locationFilter === placeType.cafe}
         ></input>
-        <br />
+        </ListItemText>
+        </ListItem>
+
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar style={{backgroundColor:"#DC3C4D" }}>
+            <RestaurantIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText>
         <label htmlFor="restaurant">Restaurant</label>
         <input
           onChange={(e) => setLocationFilter(e.target.value)}
@@ -71,7 +116,16 @@ function Map() {
           id="typeRestaurant"
           checked={locationFilter === placeType.restaurant}
         ></input>
-        <br />
+        </ListItemText>
+        </ListItem>
+
+        <ListItem>
+        <ListItemAvatar>
+          <Avatar style={{backgroundColor:"#DC3C4D" }}>
+            <ParkIcon/>
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText>
         <label htmlFor="park">Park</label>
         <input
           onChange={(e) => setLocationFilter(e.target.value)}
@@ -81,9 +135,16 @@ function Map() {
           id="typePark"
           checked={locationFilter === placeType.park}
         ></input>
-        <br />
-        <button onClick={handleClick}>Add a new location</button>
-      </div>
+        </ListItemText>
+        </ListItem>
+
+        <button onClick={handleClick} className="addNewLocationBtn">Add a new location</button>
+      
+      </List>
+
+
+    
+
 
       <div className="leaflet-container">
         <MapContainer
