@@ -5,20 +5,40 @@ import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
 import PlacesHeader from "./PlacesHeader";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function DisplayUsersMap() {
   const [userLocation, setUserLocation] = useState([]);
+  const [user, setUser] = useState("");
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
 
   useEffect(() => {
     axios
       .get(`https://dry-temple-96625.herokuapp.com/users`)
       .then((response) => {
         setUserLocation(response.data.data);
-        // setShouldFetch(false);
+        setLoading(false);
       })
       .catch((err) => console.error(err));
   }, []);
   console.log(userLocation);
+
+  useEffect(() => {
+    axios
+      .get(`https://dry-temple-96625.herokuapp.com/users/${id}`)
+      .then((response) => {
+        setUser(response.data.data);
+        setLoading(false);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (loading) {
+    return <p>Data is loading...</p>;
+  }
+
   return (
     <div>
       <PlacesHeader />
@@ -50,7 +70,14 @@ function DisplayUsersMap() {
                   {users.username} <br />
                   {users.email} <br />
                   <br />
-                  {users.about}
+                  {users.about} <br />
+                  <br />
+                  {users.availability ? "free to dogsit" : "not free to dogsit"}
+                  <br />
+                  <br />
+                  <Link to={`/userprofile/${users._id}`}>
+                    <button>Check Profile</button>
+                  </Link>
                 </Popup>
               </Marker>
             ))}
