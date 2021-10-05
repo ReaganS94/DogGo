@@ -115,3 +115,115 @@ Blue (primary): #3699E2
 Yellow: #F4C34D
 Red: #DC3C4D 
 Offwhite: #F8FBFD*/
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 830px) {
+  .dogname h2 {
+    font-size: 35px;
+  }
+
+  .dogprofile-top {
+    padding: 1em 1.5em;
+  }
+
+  .dogarray-container {
+    padding: 1em 1.5em;
+  }
+
+  .arraybuttons {
+    min-width: 120px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .dogname h2 {
+    font-size: 40px;
+  }
+
+  .dogprofile-top {
+    padding: 1em 2.5em;
+  }
+
+  .dogarray-container {
+    padding: 1em 2.5em;
+  }
+}
+
+@media (min-width: 1222px) {
+  .headerdogprofile {
+    height: 500px;
+    background-position: 10% 30%;
+  }
+}
+
+@media (min-width: 1410px) {
+  .headerdogprofile {
+    background-position: 10% 40%;
+  }
+
+  .dogprofile-top {
+    padding: 1em 4em;
+  }
+
+  .dogarray-container {
+    padding: 1em 7em;
+  }
+
+  /* img.pawprint-gallery {
+    border: solid blue;
+    margin-top: 0.1em;
+  } */
+
+  .doggallery h2 {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (min-width: 1720px) {
+  .headerdogprofile {
+    height: 600px;
+  }
+
+  .dogprofile-top {
+    padding: 1em 6em;
+  }
+
+  .dogarray-container {
+    padding: 1em 11em;
+  }
+}
+
+@media (min-width: 2000px) {
+  .headerdogprofile {
+    height: 650px;
+  }
+
+  .dogprofile-top {
+    padding: 1em 10em;
+  }
+
+  .dogarray-container {
+    padding: 1em 20em;
+  }
+}
+
+@media (min-width: 2300px) {
+  .headerdogprofile {
+    height: 650px;
+  }
+
+  .dogprofile-top {
+    padding: 1em 15em;
+  }
+
+  .dogarray-container {
+    padding: 1em 35em;
+  }
+}
+
+@media (min-width: 2400px) {
+  .doggallery h2 {
+    margin-bottom: 2em;
+  }
+}
