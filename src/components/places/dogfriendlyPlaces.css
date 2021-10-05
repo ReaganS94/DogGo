@@ -36,6 +36,10 @@
   margin: 2rem 1rem;
 }
 
+.newLocationPrompt {
+  display: flex;
+}
+
 /*----------MEDIA QUERIES------------*/
 
 @media (min-width: 1530px) {

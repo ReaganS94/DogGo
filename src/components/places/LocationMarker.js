@@ -3,7 +3,7 @@ import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-function LocationMarker({ loadLocations, setAddLocation }) {
+function LocationMarker({ loadLocations, setAddLocation, setHide }) {
   const GEOCODE_URL =
     "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&langCode=EN&location=";
 
@@ -91,6 +91,7 @@ function LocationMarker({ loadLocations, setAddLocation }) {
         setNewLocation(res.data.data);
         loadLocations();
         setAddLocation(false);
+        setHide(true);
       });
   }
   console.log(position);

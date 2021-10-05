@@ -22,6 +22,7 @@ function Map() {
   const [shouldFetch, setShouldFetch] = useState(true);
   const [locationFilter, setLocationFilter] = useState("");
   const [addLocation, setAddLocation] = useState(false);
+  const [hide, setHide] = useState(true);
 
   useEffect(() => {
     if (shouldFetch) {
@@ -53,6 +54,7 @@ function Map() {
 
   function handleClick() {
     setAddLocation(true);
+    setHide(false);
   }
 
   // const handleBarClick = () => {
@@ -168,6 +170,13 @@ function Map() {
         <button onClick={handleClick} className="addNewLocationBtn">
           Add a new location
         </button>
+        <div>
+          {hide ? null : (
+            <div className="newLocationPrompt hidden">
+              click anywhere on the map to add a new location
+            </div>
+          )}
+        </div>
       </List>
 
       <div className="leaflet-container">
@@ -201,6 +210,7 @@ function Map() {
               setShouldFetch={setShouldFetch}
               loadLocations={loadLocations}
               setAddLocation={setAddLocation}
+              setHide={setHide}
             />
           ) : null}
 
