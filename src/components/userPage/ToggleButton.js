@@ -64,12 +64,12 @@ const Slider = styled.span`
 `
 
 
-function ToggleButton({onChange}) {
+function ToggleButton({onChange, value }) {
 
 
     return (
         <InputWrapper>
-        <Input type="checkbox" onChange={onChange}/>
+        <Input type="checkbox" onChange={onChange} checked={value}/>
         <Slider/>
         </InputWrapper>
             
