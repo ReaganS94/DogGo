@@ -20,7 +20,7 @@ function DogGallery({ dog }) {
   return (
     <div className="doggallery">
       <h2 className="textwhite">my gallery</h2>
-      <img className="pawprint-gallery" src={paw} />
+      <img className="pawprint-gallery" src="/static/media/12.c2531b29.png" />
       <ImageList className="dog-gallery-box" cols={4} alignContent="flex-start">
         {dog.galleryPhotos.map((item) => (
           <ImageListItem className="doggalleryphoto" key={item.img}>
