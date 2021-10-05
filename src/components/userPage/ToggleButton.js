@@ -8,7 +8,7 @@ const InputWrapper = styled.label`
 `
 
 const Input= styled.input`
-   position: absolute;
+   display: none;
    left: -9999px; 
    top:-9999px; 
  

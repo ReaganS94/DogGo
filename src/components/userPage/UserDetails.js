@@ -28,12 +28,15 @@ const onChange = (event) => {
     .put(`https://dry-temple-96625.herokuapp.com/users/${id}`, updateUser)
     .then((res) => {
         setAvailability(!availability);
+
     })
     .catch(err => {
         console.log(err)
     })
 
 } 
+
+console.log(availability);
     
     return (
         <div className="userDetails">
