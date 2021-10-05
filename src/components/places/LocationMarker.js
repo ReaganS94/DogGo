@@ -3,12 +3,14 @@ import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function LocationMarker({ setShouldFetch }) {
+function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
   const GEOCODE_URL =
     "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&langCode=EN&location=";
 
   const [position, setPosition] = useState(null);
   const [markers, setMarkers] = useState([]);
+  const [isCreating, setIsCreating] = useState(false);
+  const [newLocation, setNewLocation] = useState({});
   // const [newLocation, setNewLocation] = useState(null);
 
   const [name, setName] = useState("");
@@ -35,7 +37,7 @@ function LocationMarker({ setShouldFetch }) {
       );
 
       const { Postal, Address, City } = newMarker.data.address;
-
+      setIsCreating(true);
       setMarkers([
         ...markers,
         { Postal, Address, City, lat: e.latlng.lat, lng: e.latlng.lng },
@@ -43,6 +45,7 @@ function LocationMarker({ setShouldFetch }) {
       setLat(e.latlng.lat);
       setLng(e.latlng.lng);
       setAddress(Address + " " + Postal + " " + City);
+
       console.log(newMarker.data.address);
     },
   });
@@ -56,6 +59,10 @@ function LocationMarker({ setShouldFetch }) {
       circle.addTo(myMap);
     });
   }, [map]);
+
+  useEffect(() => {
+    setIsCreating(false);
+  }, [newLocation]);
 
   // useEffect(() => {
   //   axios
@@ -79,10 +86,6 @@ function LocationMarker({ setShouldFetch }) {
     type: type,
   };
 
-  function refreshPage() {
-    window.location.reload();
-  }
-
   function submit(e) {
     e.preventDefault();
     console.log({
@@ -96,12 +99,24 @@ function LocationMarker({ setShouldFetch }) {
       },
       type: type,
     });
-    axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+    //axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios
-      .post(`https://dry-temple-96625.herokuapp.com/locations`, addNewLocation)
-      .then(alert("Location Successfully Saved"))
-      .then(refreshPage);
+      .post(
+        `https://dry-temple-96625.herokuapp.com/locations`,
+        addNewLocation,
+        {
+          "Access-Control-Allow-Origin": "*",
+        }
+      )
+      .then((res) => {
+        setNewLocation(res.data.data);
+        loadLocations();
+        setAddLocation(false);
+      });
+    //.then(refreshPage);
   }
+
+  console.log(newLocation);
 
   return position === null ? null : (
     <>
@@ -112,65 +127,76 @@ function LocationMarker({ setShouldFetch }) {
         {markers.map((marker) => (
           <Marker position={marker} key={marker.lat + marker.lng}>
             <Popup>
-              {marker.Address}, {marker.Postal}, {marker.City}
-              <form onSubmit={(e) => submit(e)}>
-                <input
-                  onChange={(e) => setName(e.target.value)}
-                  type="text"
-                  placeholder="name"
-                  value={name}
-                  id="name"
-                ></input>
-                <input
-                  onChange={(e) => setWebsite(e.target.value)}
-                  type="text"
-                  placeholder="website"
-                  value={website}
-                  id="website"
-                ></input>
-                <input
-                  onChange={(e) => setPhone(e.target.value)}
-                  type="number"
-                  placeholder="phone"
-                  value={phone}
-                  id="phone"
-                ></input>
-                <br />
-                <input
-                  onChange={(e) => setType(e.target.value)}
-                  type="radio"
-                  value={typeSelected.bar}
-                  id="bar"
-                  name="type"
-                ></input>
-                <label htmlFor="bar">Bar</label>
-                <input
-                  onChange={(e) => setType(e.target.value)}
-                  type="radio"
-                  value={typeSelected.cafe}
-                  id="cafe"
-                  name="type"
-                ></input>
-                <label htmlFor="cafe">Cafe</label>
-                <input
-                  onChange={(e) => setType(e.target.value)}
-                  type="radio"
-                  value={typeSelected.restaurant}
-                  id="restaurant"
-                  name="type"
-                ></input>
-                <label htmlFor="restaurant">Restaurant</label>
-                <input
-                  onChange={(e) => setType(e.target.value)}
-                  type="radio"
-                  value={typeSelected.park}
-                  id="park"
-                  name="type"
-                ></input>
-                <label htmlFor="park">Park</label>
-                <br />
-                <button>Submit</button>
-              </form>
+              {isCreating ? (
+                <>
+                  {marker.Address}, {marker.Postal}, {marker.City}
+                  <form onSubmit={(e) => submit(e)}>
+                    <input
+                      onChange={(e) => setName(e.target.value)}
+                      type="text"
+                      placeholder="name"
+                      value={name}
+                      id="name"
+                    ></input>
+                    <input
+                      onChange={(e) => setWebsite(e.target.value)}
+                      type="text"
+                      placeholder="website"
+                      value={website}
+                      id="website"
+                    ></input>
+                    <input
+                      onChange={(e) => setPhone(e.target.value)}
+                      type="number"
+                      placeholder="phone"
+                      value={phone}
+                      id="phone"
+                    ></input>
+                    <br />
+                    <input
+                      onChange={(e) => setType(e.target.value)}
+                      type="radio"
+                      value={typeSelected.bar}
+                      id="bar"
+                      name="type"
+                    ></input>
+                    <label htmlFor="bar">Bar</label>
+                    <input
+                      onChange={(e) => setType(e.target.value)}
+                      type="radio"
+                      value={typeSelected.cafe}
+                      id="cafe"
+                      name="type"
+                    ></input>
+                    <label htmlFor="cafe">Cafe</label>
+                    <input
+                      onChange={(e) => setType(e.target.value)}
+                      type="radio"
+                      value={typeSelected.restaurant}
+                      id="restaurant"
+                      name="type"
+                    ></input>
+                    <label htmlFor="restaurant">Restaurant</label>
+                    <input
+                      onChange={(e) => setType(e.target.value)}
+                      type="radio"
+                      value={typeSelected.park}
+                      id="park"
+                      name="type"
+                    ></input>
+                    <label htmlFor="park">Park</label>
+                    <br />
+                    <button>Submit</button>
+                  </form>
+                </>
+              ) : (
+                <div>
+                  {newLocation.name} <br />
+                  {newLocation.address} <br />
+                  {newLocation.phone ? newLocation.phone : "-"} <br />
+                  {newLocation.website ? newLocation.website : "-"} <br />
+                </div>
+              )}
             </Popup>
           </Marker>
         ))}

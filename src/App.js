@@ -8,6 +8,7 @@ import SignIn from "./components/signIn&Up/SignIn";
 import SignUp from "./components/signIn&Up/SignUp";
 import AllDogs from "./components/allprofiles/AllDogs";
 import AllUsers from "./components/allprofiles/AllUsers";
+import DisplayUsersMap from "./components/places/DisplayUsersMap";
 import Community from "./components/allprofiles/Community";
 import ScrollTop from "./ScrollTop";
 
@@ -71,6 +72,11 @@ function App() {
       <Switch>
         <Route path="/allusers">
           <AllUsers />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/dogsitting">
+          <DisplayUsersMap />
         </Route>
       </Switch>
       <Switch>
