@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import LocationMarker from "./LocationMarker";
-import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
 import PlacesHeader from "./PlacesHeader";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 
 import DogsittingHeader from "./DogsittingHeader";
 
@@ -40,7 +39,15 @@ function DisplayUsersMap() {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={5000} //5 secs
+      />
+    );
   }
 
   return (

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import LocationMarker from "./LocationMarker";
-import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
 
@@ -18,6 +17,7 @@ import LocalCafeIcon from '@mui/icons-material/LocalCafe';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ParkIcon from '@mui/icons-material/Park';
 import ListItemText from '@mui/material/ListItemText';
+import ExploreIcon from '@mui/icons-material/Explore';
 
 
 function Map() {
@@ -31,6 +31,10 @@ function Map() {
       loadLocations();
     }
   }, [shouldFetch]);
+
+  useEffect(() => {
+    loadLocations();
+  }, [locationFilter]);
 
   const placeType = {
     bar: "614a226be5ae0efb2d477457",
@@ -54,6 +58,10 @@ function Map() {
     setAddLocation(true);
   }
 
+  // const handleBarClick = () => {
+  //   setLocationFilter(placeType.bar);
+  // };
+
   return (
     <div className="container">
      <List 
@@ -65,6 +73,24 @@ function Map() {
         marginRight: 0
         }}
        >
+          <ListItem>
+        <ListItemAvatar>
+          <Avatar style={{backgroundColor:"#DC3C4D" }}>
+            <ExploreIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText>
+        <label>Show All Locations</label>
+        <input
+          onChange={(e) => setLocationFilter("")}
+          type="radio"
+          value=""
+          name="placeType"
+          checked={!locationFilter}
+        ></input>  
+        </ListItemText>
+        </ListItem>
+
         <ListItem>
         <ListItemAvatar>
           <Avatar style={{backgroundColor:"#DC3C4D" }}>
@@ -142,11 +168,8 @@ function Map() {
         </ListItem>
 
         <button onClick={handleClick} className="addNewLocationBtn">Add a new location</button>
-      
+
       </List>
-
-
-    
 
       <div className="leaflet-container">
         <MapContainer
@@ -189,5 +212,3 @@ function Map() {
 }
 
 export default Map;
-
-// ?type=642839748923

@@ -2,8 +2,9 @@ import L from "leaflet";
 import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
-function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
+function LocationMarker({ loadLocations, setAddLocation }) {
   const GEOCODE_URL =
     "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&langCode=EN&location=";
 
@@ -11,7 +12,6 @@ function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
   const [markers, setMarkers] = useState([]);
   const [isCreating, setIsCreating] = useState(false);
   const [newLocation, setNewLocation] = useState({});
-  // const [newLocation, setNewLocation] = useState(null);
 
   const [name, setName] = useState("");
   const [website, setWebsite] = useState("");
@@ -45,8 +45,6 @@ function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
       setLat(e.latlng.lat);
       setLng(e.latlng.lng);
       setAddress(Address + " " + Postal + " " + City);
-
-      console.log(newMarker.data.address);
     },
   });
 
@@ -64,16 +62,6 @@ function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
     setIsCreating(false);
   }, [newLocation]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://dry-temple-96625.herokuapp.com/locations`)
-  //     .then((response) => {
-  //       setNewLocation(response.data);
-  //       setShouldFetch(false);
-  //     })
-  //     .catch((err) => console.error(err));
-  // }, []);
-
   const addNewLocation = {
     name: name,
     website: website,
@@ -88,17 +76,7 @@ function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
 
   function submit(e) {
     e.preventDefault();
-    console.log({
-      name: name,
-      website: website,
-      phone: "Tel: " + phone,
-      address: address,
-      LatLng: {
-        lat: lat,
-        lng: lng,
-      },
-      type: type,
-    });
+
     //axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
     axios
       .post(
@@ -113,11 +91,8 @@ function LocationMarker({ setShouldFetch, loadLocations, setAddLocation }) {
         loadLocations();
         setAddLocation(false);
       });
-    //.then(refreshPage);
   }
-
-  console.log(newLocation);
-
+  console.log(position);
   return position === null ? null : (
     <>
       <Marker position={position}>
