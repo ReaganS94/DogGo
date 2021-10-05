@@ -58,7 +58,7 @@ function UserDetails({ user }) {
         <h6>about me</h6>
         <p>{user.about}</p>
         <div className="walkingDog">
-          <img src="/static/media/doggoLogo.d2be4059.png" width="350px" />
+          <img src="/static/media/9.ba396c01.svg" width="350px" />
         </div>
       </div>
 
