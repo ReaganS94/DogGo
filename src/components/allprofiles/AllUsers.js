@@ -5,6 +5,7 @@ import { createTheme, styled } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -35,7 +36,15 @@ function AllUsers() {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={5000} //5 secs
+      />
+    );
   }
 
   return (

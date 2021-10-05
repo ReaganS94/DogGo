@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 
 import DogAbout from "./DogAbout";
 import DogArrays from "./DogArrays";
@@ -27,9 +28,16 @@ function Dogprofile() {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={5000} //5 secs
+      />
+    );
   }
-
   return (
     <>
       <div className="headerdogprofile" id="dogprofiletop">

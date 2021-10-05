@@ -8,6 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Loader from "react-loader-spinner";
 
 function CreateDogCommands({ command, setCommand }) {
   const [commandOptions, setCommandOptions] = useState([]);
@@ -26,7 +27,15 @@ function CreateDogCommands({ command, setCommand }) {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={5000} //5 secs
+      />
+    );
   }
 
   const onChange = (e) => {

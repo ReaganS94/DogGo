@@ -8,13 +8,12 @@ import UserDetails from "./UserDetails";
 
 import { Link } from "react-router-dom";
 
-import walkingDog from "./9.svg";
+import Loader from "react-loader-spinner";
 
 function UserProfile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState([]);
   const { id } = useParams();
- 
 
   useEffect(() => {
     axios
@@ -30,10 +29,16 @@ function UserProfile() {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={5000} //5 secs
+      />
+    );
   }
-
-  
 
   return (
     <div className="userProfile">
