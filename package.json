@@ -30,6 +30,7 @@
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.1",
     "react-leaflet-geosearch": "^0.3.4",
+    "react-loader-spinner": "^4.0.0",
     "react-popup-alert": "^2.0.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
