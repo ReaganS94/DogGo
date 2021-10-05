@@ -53,6 +53,7 @@ function CreateDogArrays({ character, setCharacter }) {
                     value={char._id}
                     onChange={onChange}
                     name="character"
+                    checked={character.includes(char._id)}
                   />
                 }
                 label={char.character}
