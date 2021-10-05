@@ -68,3 +68,38 @@ Blue (primary): #3699E2
 Yellow: #F4C34D
 Red: #DC3C4D 
 Offwhite: #F8FBFD*/
+
+/*----------MEDIA QUERIES------------*/
+
+@media (max-width: 942px) {
+  .imagelist-alldogs {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    padding-left: 1em;
+  }
+
+  .MuiImageListItem-root {
+    display: flex;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1410px) {
+  .header-alldogs {
+    height: 400px;
+  }
+
+  .imagelist-alldogs {
+    display: flex;
+    justify-content: center;
+    max-width: 95%;
+    min-width: 70%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .header-alldogs {
+    height: 450px;
+  }
+}

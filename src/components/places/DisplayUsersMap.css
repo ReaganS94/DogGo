@@ -1,0 +1,50 @@
+.dogsittingplacesheader {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-image: url("../../img/headerphotos/30.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+  filter: saturate(1);
+}
+
+.mapdogsitting {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.dogsittingmapcontainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.dogsittingheadline {
+  text-align: center;
+}
+
+.userpopupimg {
+  object-fit: cover;
+}
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 1530px) {
+  .dogsittingplacesheader {
+    /* height: 600px; */
+    background-position: 0 45%;
+  }
+}
+
+@media (min-width: 1960px) {
+  .dogsittingplacesheader {
+    height: 600px;
+  }
+}
+
+@media (min-width: 2300px) {
+  .dogsittingplacesheader {
+    height: 700px;
+  }
+}
