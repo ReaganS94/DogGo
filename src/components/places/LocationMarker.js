@@ -1,12 +1,13 @@
 import L from "leaflet";
 import { Marker, Popup, useMap, useMapEvents } from "react-leaflet";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import Loader from "react-loader-spinner";
 
 function LocationMarker({ loadLocations, setAddLocation }) {
   const GEOCODE_URL =
     "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&langCode=EN&location=";
+
+  const leafletRef = useRef();
 
   const [position, setPosition] = useState(null);
   const [markers, setMarkers] = useState([]);

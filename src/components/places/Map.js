@@ -98,14 +98,7 @@ function Map() {
           checked={!locationFilter}
         ></input>
         <br />
-        {/* <button onClick={() => handleBarClick()}>Bars</button>
-        <br />
-        <button>Restaurants</button>
-        <br />
-        <button>Cafe</button>
-        <br />
-        <button>Parks</button>
-        <br /> */}
+
         <button onClick={handleClick}>Add a new location</button>
       </div>
 
@@ -119,6 +112,7 @@ function Map() {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+
           {allLocations.map((location) => (
             <Marker
               key={location._id}
