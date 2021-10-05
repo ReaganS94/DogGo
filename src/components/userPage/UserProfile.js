@@ -14,6 +14,7 @@ function UserProfile() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState([]);
   const { id } = useParams();
+ 
 
   useEffect(() => {
     axios
@@ -31,6 +32,8 @@ function UserProfile() {
   if (loading) {
     return <p>Data is loading...</p>;
   }
+
+  
 
   return (
     <div className="userProfile">
