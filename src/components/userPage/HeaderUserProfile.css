@@ -1,22 +1,23 @@
 .headerUserProfile {
-    height: 400px;
-    width: 100%;
-   position: relative;
-    /* position: absolute;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  /* position: absolute;
     top: 0px;
     left: 0px; */
-    background-image: url(/src/img/headerphotos/16.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 10% 20%;
-  }
+  background-image: url(/src/img/headerphotos/16.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 20%;
+}
 
-  
-  .slogan {
-    margin: 1em;
-  }
-  
-  .button-header {
-    margin-left: 1em;
-    width: 150px;
-  }
+.slogan {
+  margin: 1em;
+}
+
+.button-header {
+  margin-left: 1em;
+  width: 150px;
+}
+
+/*----------MEDIA QUERIES------------*/

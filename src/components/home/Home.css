@@ -85,3 +85,25 @@
 .hide {
   display: none;
 }
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 1270px) {
+  .about-container {
+    margin-left: 3em;
+  }
+
+  .about-left {
+    padding-right: 2em;
+  }
+}
+
+@media (min-width: 1500px) {
+  .about-container {
+    margin-left: 5em;
+  }
+
+  .about-left {
+    padding-right: 3em;
+  }
+}

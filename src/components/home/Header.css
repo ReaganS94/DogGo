@@ -18,3 +18,26 @@
   margin-left: 1em;
   width: 150px;
 }
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 1270px) {
+  .header {
+    height: 650px;
+    background-position: 0 70%;
+  }
+}
+
+@media (min-width: 1824px) {
+  .header {
+    height: 650px;
+    background-position: 0 60%;
+  }
+}
+
+@media (min-width: 1940px) {
+  .header {
+    height: 700px;
+    background-position: 0 50%;
+  }
+}
