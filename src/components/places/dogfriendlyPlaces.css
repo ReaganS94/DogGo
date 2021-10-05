@@ -1,17 +1,11 @@
-.leaflet-container {
-  width: 100%;
-  height: 600px;
-  margin: 1em 0 1em;
-}
-
 .headerPlaces {
-  height: 600px;
+  height: 500px;
   width: 100%;
   position: relative;
   background-image: url("../../img/headerphotos/20.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 70%;
+  background-position: 0 60%;
 }
 
 .slogan {
@@ -23,10 +17,46 @@
   width: 150px;
 }
 
+
 .container {
   display: flex;
+  width: 100%;
+  justify-content:center;
+
 }
 
-.locations {
-  width: 20%;
+.leaflet-container {
+  width: 100%;
+  height: 600px;
+  margin-top: 1rem; 
+  margin-bottom: 1.5rem;
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+
+.addNewLocationBtn {
+  margin: 2rem 1rem;
+}
+
+
+/*----------MEDIA QUERIES------------*/
+
+@media (min-width: 1530px) {
+  .headerPlaces {
+    /* height: 600px; */
+    background-position: 0 70%;
+  }
+}
+
+@media (min-width: 1960px) {
+  .headerPlaces {
+    height: 600px;
+  }
+}
+
+@media (min-width: 2300px) {
+  .headerPlaces {
+    height: 700px;
+  }
 }

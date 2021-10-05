@@ -4,6 +4,19 @@ import LocationMarker from "./LocationMarker";
 import Search from "./Search";
 import axios from "axios";
 
+// material UI elements
+
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import LocalBarIcon from "@mui/icons-material/LocalBar";
+import LocalCafeIcon from "@mui/icons-material/LocalCafe";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import ParkIcon from "@mui/icons-material/Park";
+import ListItemText from "@mui/material/ListItemText";
+import ExploreIcon from "@mui/icons-material/Explore";
+
 function Map() {
   const [allLocations, setAllLocations] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(true);
@@ -48,59 +61,114 @@ function Map() {
 
   return (
     <div className="container">
-      <div className="locations">
-        <label htmlFor="bar">Bar</label>
-        <input
-          onChange={(e) => setLocationFilter(e.target.value)}
-          type="radio"
-          value={placeType.bar}
-          name="placeType"
-          id="typeBar"
-          checked={locationFilter === placeType.bar}
-        ></input>
-        <br />
-        <label htmlFor="cafe">Cafe</label>
-        <input
-          onChange={(e) => setLocationFilter(e.target.value)}
-          type="radio"
-          value={placeType.cafe}
-          name="placeType"
-          id="typeCafe"
-          checked={locationFilter === placeType.cafe}
-        ></input>
-        <br />
-        <label htmlFor="restaurant">Restaurant</label>
-        <input
-          onChange={(e) => setLocationFilter(e.target.value)}
-          type="radio"
-          value={placeType.restaurant}
-          name="placeType"
-          id="typeRestaurant"
-          checked={locationFilter === placeType.restaurant}
-        ></input>
-        <br />
-        <label htmlFor="park">Park</label>
-        <input
-          onChange={(e) => setLocationFilter(e.target.value)}
-          type="radio"
-          value={placeType.park}
-          name="placeType"
-          id="typePark"
-          checked={locationFilter === placeType.park}
-        ></input>
-        <br />
-        <label>Show All Locations</label>
-        <input
-          onChange={(e) => setLocationFilter("")}
-          type="radio"
-          value=""
-          name="placeType"
-          checked={!locationFilter}
-        ></input>
-        <br />
+      <List
+        style={{
+          width: "100%",
+          maxWidth: 360,
+          marginTop: "0.5rem",
+          marginLeft: "1rem",
+          marginRight: 0,
+        }}
+      >
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar style={{ backgroundColor: "#DC3C4D" }}>
+              <ExploreIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText>
+            <label htmlFor="allLocations">Show All Locations</label>
+            <input
+              onChange={(e) => setLocationFilter("")}
+              type="radio"
+              value=""
+              name="placeType"
+              checked={!locationFilter}
+              id="allLocations"
+            ></input>
+          </ListItemText>
+        </ListItem>
 
-        <button onClick={handleClick}>Add a new location</button>
-      </div>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar style={{ backgroundColor: "#DC3C4D" }}>
+              <LocalBarIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText>
+            <label htmlFor="typeBar">Bar</label>
+            <input
+              onChange={(e) => setLocationFilter(e.target.value)}
+              type="radio"
+              value={placeType.bar}
+              name="placeType"
+              id="typeBar"
+              checked={locationFilter === placeType.bar}
+            />
+          </ListItemText>
+        </ListItem>
+
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar style={{ backgroundColor: "#DC3C4D" }}>
+              <LocalCafeIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText>
+            <label htmlFor="typeCafe">Cafe</label>
+            <input
+              onChange={(e) => setLocationFilter(e.target.value)}
+              type="radio"
+              value={placeType.cafe}
+              name="placeType"
+              id="typeCafe"
+              checked={locationFilter === placeType.cafe}
+            ></input>
+          </ListItemText>
+        </ListItem>
+
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar style={{ backgroundColor: "#DC3C4D" }}>
+              <RestaurantIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText>
+            <label htmlFor="typeRestaurant">Restaurant</label>
+            <input
+              onChange={(e) => setLocationFilter(e.target.value)}
+              type="radio"
+              value={placeType.restaurant}
+              name="placeType"
+              id="typeRestaurant"
+              checked={locationFilter === placeType.restaurant}
+            ></input>
+          </ListItemText>
+        </ListItem>
+
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar style={{ backgroundColor: "#DC3C4D" }}>
+              <ParkIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText>
+            <label htmlFor="typePark">Park</label>
+            <input
+              onChange={(e) => setLocationFilter(e.target.value)}
+              type="radio"
+              value={placeType.park}
+              name="placeType"
+              id="typePark"
+              checked={locationFilter === placeType.park}
+            ></input>
+          </ListItemText>
+        </ListItem>
+
+        <button onClick={handleClick} className="addNewLocationBtn">
+          Add a new location
+        </button>
+      </List>
 
       <div className="leaflet-container">
         <MapContainer
