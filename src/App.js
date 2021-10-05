@@ -10,6 +10,7 @@ import AllDogs from "./components/allprofiles/AllDogs";
 import AllUsers from "./components/allprofiles/AllUsers";
 import DisplayUsersMap from "./components/places/DisplayUsersMap";
 import Community from "./components/allprofiles/Community";
+import ScrollTop from "./ScrollTop";
 
 // import axios from "axios";
 // import { useEffect, useState } from "react";
@@ -27,6 +28,7 @@ import "../src/components/dogprofile/Dogprofile.css";
 function App() {
   return (
     <Router>
+      <ScrollTop />
       <Switch>
         <Route path="/dogfriendlyplaces">
           <Dogfriendlyplaces />

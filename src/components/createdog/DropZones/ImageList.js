@@ -21,7 +21,9 @@ const ImageList = ({ images }) => {
 
   return (
     <>
-      <section className="file-list">{images.map(renderImage)}</section>
+      <section className="file-list">
+        {images && images.map(renderImage)}
+      </section>
     </>
   );
 };

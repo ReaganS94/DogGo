@@ -28,6 +28,7 @@
 .addprofilepic {
   margin-top: 25px;
   margin-left: 1em;
+  font-family: Kollektif;
 }
 
 /*------------------------------------FORM----------------------------------------*/
@@ -64,11 +65,32 @@
   border-bottom: solid 2px rgb(231, 231, 231);
 }
 
+.createdog-commands {
+  display: flex;
+}
+
+.createdog-commands-boxes {
+  font-family: Helvetica;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  font-family: Helvetica;
+}
 /*------------------------------------BOTTOM----------------------------------------*/
 
 .createdog-bottom {
   margin: 0 auto;
   margin-bottom: 3em;
+}
+
+.addgallerytext {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 1em 0;
+}
+
+.addgallerytext p {
+  font-family: Kollektif;
 }
 
 .submitbutton {
@@ -87,6 +109,25 @@
 
 .submitbutton:hover {
   background-color: #d65d69;
+}
+
+.cancelbutton {
+  background-color: #888888;
+  color: #f8fbfd;
+  border: none;
+  border-radius: 1em;
+  margin-right: 1em;
+  padding: 0.5em 1em;
+  min-width: 100px;
+  font-family: "Kollektif", "Arial";
+  font-size: 1em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.cancelbutton:hover {
+  background-color: #888888;
 }
 
 /* 

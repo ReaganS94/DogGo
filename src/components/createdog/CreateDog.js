@@ -10,15 +10,13 @@ import ImageList from "../createdog/DropZones/ImageList";
 import CreateDogPic from "./CreateDogPic";
 
 import { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 
 import cuid from "cuid";
 import axios from "axios";
 
 function CreateDog() {
-  const [images, setImages] = useState([]);
-  const [profilepic, setProfilePic] = useState([]);
-  const [character, setCharacter] = useState([]);
   //acceptedFiles is an array of File values. You can read the file or send it to the server and upload.
   //Whatever process you want to do, you can do it there
 
@@ -50,7 +48,7 @@ function CreateDog() {
     reader.readAsDataURL(acceptedFiles[0]);
   }, []);
 
-  /*CREATE NEW DOG // PUSH TO DATABASE------------------*/
+  /*CREATE NEW DOG // PUSH TO SERVER------------------*/
 
   const [dogname, setDogname] = useState("");
   const [dogbreed, setDogbreed] = useState("");
@@ -62,18 +60,14 @@ function CreateDog() {
   const [dogcatfriendly, setDogcatfriendly] = useState();
   const [dogallergies, setDogallergies] = useState();
   const [dogcastrated, setDogcastrated] = useState();
-  // const [dogcharacter, setDogcharacter] = useState([]);
-  // const [dogcommands, setDogcommands] = useState([]);
+
   const [dogprofilepic, setDogprofilepic] = useState("");
   const [doggallery, setDoggallery] = useState([]);
 
-  const [sit, setSit] = useState();
-  const [come, setCome] = useState();
-  const [paw, setPaw] = useState();
-  const [stop, setStop] = useState();
-  const [stay, setStay] = useState();
-  const [bring, setBring] = useState();
-  const [down, setDown] = useState();
+  const [images, setImages] = useState([]);
+  const [profilepic, setProfilePic] = useState([]);
+  const [character, setCharacter] = useState([]);
+  const [command, setCommand] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -87,18 +81,21 @@ function CreateDog() {
       catFriendly: dogcatfriendly,
       allergies: dogallergies,
       castrated: dogcastrated,
-      // dogcharacter,
-      // dogcommands,
       profilePic: dogprofilepic,
       doggallery,
       character,
-      sit,
-      come,
-      paw,
-      stop,
-      stay,
-      bring,
-      down,
+      commands: command,
+    };
+
+    const refreshPage = (e) => {
+      window.location.reload(false);
+    };
+
+    const scrollToTop = (e) => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     };
 
     const cleanInput = (e) => {
@@ -118,15 +115,9 @@ function CreateDog() {
       setDoggallery([]);
 
       setCharacter([]);
+      setCommand([]);
       setImages([]);
-
-      setSit();
-      setCome();
-      setPaw();
-      setStop();
-      setStay();
-      setBring();
-      setDown();
+      setProfilePic("");
     };
 
     axios
@@ -135,7 +126,10 @@ function CreateDog() {
         console.log(res);
         alert("Your dog has been added.");
         cleanInput();
-      });
+        // refreshPage();
+        scrollToTop();
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -178,22 +172,8 @@ function CreateDog() {
               character={character}
               setCharacter={setCharacter}
             />
-            <CreateDogCommands
-              sit={sit}
-              setSit={setSit}
-              come={come}
-              setCome={setCome}
-              paw={paw}
-              setPaw={setPaw}
-              stop={stop}
-              setStop={setStop}
-              stay={stay}
-              setStay={setStay}
-              bring={bring}
-              setBring={setBring}
-              down={down}
-              setDown={setDown}
-            />
+
+            <CreateDogCommands command={command} setCommand={setCommand} />
 
             <DropZone
               onDrop={onDropImage}
@@ -210,6 +190,9 @@ function CreateDog() {
         </div>
 
         <div className="createdog-bottom">
+          <Link to="/userprofile/614a158ebb2bb0928e269f5f">
+            <button className="cancelbutton">cancel</button>
+          </Link>
           <input
             className="submitbutton"
             value="save"

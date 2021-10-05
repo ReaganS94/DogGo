@@ -34,9 +34,9 @@ function AllDogs() {
       });
   }, []);
 
-  if (loading) {
-    return <p>Data is loading...</p>;
-  }
+  // if (loading) {
+  //   return <p>Data is loading...</p>;
+  // }
 
   return (
     <>
@@ -61,7 +61,7 @@ function AllDogs() {
               <ImageListItemBar
                 title={dog.name}
                 position="below"
-                subtitle={`proud doggo of ${dog.user.username}`}
+                subtitle={`${dog.breed}, ${dog.age} years old`}
                 actionIcon={
                   <Link to={`/dogprofile/${dog._id}`}>
                     <button>see profile</button>

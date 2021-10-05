@@ -1,31 +1,30 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
 
+import { Link } from "react-router-dom";
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="#2E2E2E" align="center" {...props}>
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="#2E2E2E" /*href="need to put our address">*/>
         DogGo
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
-
 
 export default function SignInSide() {
   const handleSubmit = (event) => {
@@ -33,14 +32,14 @@ export default function SignInSide() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      email: data.get("email"),
+      password: data.get("password"),
     });
   };
 
   return (
     <div>
-      <Grid container component="main" style={{ height: '100vh' }}>
+      <Grid container component="main" style={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
           item
@@ -48,12 +47,15 @@ export default function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1621936303335-5406c8a85ca0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80)',
-            backgroundRepeat: 'no-repeat',
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1621936303335-5406c8a85ca0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80)",
+            backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+              t.palette.mode === "light"
+                ? t.palette.grey[50]
+                : t.palette.grey[900],
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -61,18 +63,23 @@ export default function SignInSide() {
             sx={{
               my: 8,
               mx: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            <Avatar style={{ margin: "1rem", backgroundColor: '#DC3C4D' }}>
-             <LockOutlinedIcon />
+            <Avatar style={{ margin: "1rem", backgroundColor: "#DC3C4D" }}>
+              <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} style={{ marginTop: "1rem" }}>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              style={{ marginTop: "1rem" }}
+            >
               <TextField
                 margin="normal"
                 required
@@ -94,30 +101,43 @@ export default function SignInSide() {
                 autoComplete="current-password"
               />
               <FormControlLabel
-                control={<Checkbox value="remember" style={{color:"#3699E2"}}/>}
+                control={
+                  <Checkbox value="remember" style={{ color: "#3699E2" }} />
+                }
                 label="Remember me"
               />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                style={{marginTop:"3rem", marginBottom: "2rem", backgroundColor:"#3699E2"}}
-              >
-                Sign In
-              </Button>
+              <Link to="/userprofile/614a158ebb2bb0928e269f5f">
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  style={{
+                    marginTop: "3rem",
+                    marginBottom: "2rem",
+                    backgroundColor: "#3699E2",
+                  }}
+                >
+                  Sign In
+                </Button>
+              </Link>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link
+                    style={{ color: "#3699E2", fontFamily: "Gidole-Regular" }}
+                  >
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link
+                    to="/signup"
+                    style={{ color: "#3699E2", fontFamily: "Gidole-Regular" }}
+                  >
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright style={{marginBottom:"1rem"}} />
+              <Copyright style={{ marginTop: "1rem" }} />
             </Box>
           </Box>
         </Grid>

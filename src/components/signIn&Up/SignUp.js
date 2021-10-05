@@ -5,13 +5,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
+
+import {useState, useEffect} from 'react'
+import { Link, Redirect } from "react-router-dom";
 import axios from 'axios'; 
 
 
@@ -30,16 +32,45 @@ function Copyright(props) {
 
 
 export default function SignUp() {
- 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [about, setAbout] = useState("");
+  const [city, setCity] = useState("");
+
+  const [userId, setUserId] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newUser = {
+      username, 
+      password,
+      email,
+      phoneNumber,
+      about,
+      city
+    };
+
+    axios
+      .post("https://dry-temple-96625.herokuapp.com/users", newUser)
+      .then((res) => {
+        setUserId(res.data.data._id)
+      });
+
+    setUsername("");
+    setPassword("");
+    setEmail("");
+    setPhoneNumber("");
+    setAbout("");
+    setCity(""); 
+
+    alert("Your profile is registered.");
   };
+
+  if (userId) return <Redirect to={`/userprofile/${userId}`} />
 
   return (
     <>
@@ -70,6 +101,8 @@ export default function SignUp() {
                   id="firstName"
                   label="Name"
                   autoFocus
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -80,6 +113,8 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -91,6 +126,8 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -102,6 +139,8 @@ export default function SignUp() {
                   id="city"
                   label="city"
                   autoFocus
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -113,6 +152,8 @@ export default function SignUp() {
                   id="phoneNumber"
                   label="phoneNumber"
                   autoFocus
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -123,6 +164,8 @@ export default function SignUp() {
                    rowsMax={10}
                    fullWidth
                    columnsMax={10}
+                   value={about}
+                   onChange={(e) => setAbout(e.target.value)}
                     />
               </Grid>
               <Grid item xs={12}>
@@ -135,14 +178,13 @@ export default function SignUp() {
             <Button
               type="submit"
               fullWidth
-              variant="contained"
-              
+              variant="contained" 
             >
               Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item color="#2E2E2E" align="center" margin="1rem auto">
-                <Link href="#" variant="body2">
+                <Link to="/signin" style={{color: "#3699E2",  fontFamily: "Gidole-Regular"}}>
                   Already have an account? Sign in
                 </Link>
               </Grid>
