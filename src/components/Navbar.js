@@ -1,14 +1,11 @@
+import doggoLogo from "../img/logo/doggoLogo.png";
 import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="navbar-container">
       <div className="navbar-left">
-        <img
-          src="/static/media/doggoLogo.d2be4059.png"
-          className="nav-logo"
-          alt="nav-logo"
-        />
+        <img src={doggoLogo} className="nav-logo" alt="nav-logo" />
       </div>
       <div className="navbar-center">
         <ul>
