@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import LocationMarker from "./LocationMarker";
-import LocationsList from "./LocationsList";
 import Search from "./Search";
 import axios from "axios";
 
@@ -16,6 +15,10 @@ function Map() {
       loadLocations();
     }
   }, [shouldFetch]);
+
+  useEffect(() => {
+    loadLocations();
+  }, [locationFilter]);
 
   const placeType = {
     bar: "614a226be5ae0efb2d477457",
@@ -38,6 +41,10 @@ function Map() {
   function handleClick() {
     setAddLocation(true);
   }
+
+  // const handleBarClick = () => {
+  //   setLocationFilter(placeType.bar);
+  // };
 
   return (
     <div className="container">
@@ -82,6 +89,23 @@ function Map() {
           checked={locationFilter === placeType.park}
         ></input>
         <br />
+        <label>Show All Locations</label>
+        <input
+          onChange={(e) => setLocationFilter("")}
+          type="radio"
+          value=""
+          name="placeType"
+          checked={!locationFilter}
+        ></input>
+        <br />
+        {/* <button onClick={() => handleBarClick()}>Bars</button>
+        <br />
+        <button>Restaurants</button>
+        <br />
+        <button>Cafe</button>
+        <br />
+        <button>Parks</button>
+        <br /> */}
         <button onClick={handleClick}>Add a new location</button>
       </div>
 
@@ -126,5 +150,3 @@ function Map() {
 }
 
 export default Map;
-
-// ?type=642839748923

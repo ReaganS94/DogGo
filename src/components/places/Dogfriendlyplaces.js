@@ -14,6 +14,3 @@ function Dogfriendlyplaces() {
 }
 
 export default Dogfriendlyplaces;
-
-// https://mui.com/components/portal/#main-content
-// https://www.youtube.com/watch?v=cK7zIoC4lEY
